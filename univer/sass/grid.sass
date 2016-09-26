@@ -1,0 +1,195 @@
+@import "styles"
+
+//reset browser style
+*
+  margin: 0
+  padding: 0
+  -webkit-box-sizing: border-box
+  box-sizing: border-box
+  appearance: none
+  outline: none
+  &::selection
+    background: lightblue
+  &:before, &:after
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+
+html, body
+  height: 100%
+  background: $clrBodyBg
+
+%clearfix
+  &:after
+    content: ' '
+    clear: both
+    display: block
+
+.row, .wrap, .flx, .flex-container, .container
+  @extend %clearfix
+
+$footerHeightDouble: 18.6rem
+$footerHeightSingle: 5.45rem
+.footer
+  margin-top: -$footerHeightDouble
+  height: $footerHeightDouble
+  &_single
+    margin-top: -$footerHeightSingle
+    height: $footerHeightSingle
+    
+.page-wrap
+  min-height: 100%
+  padding-bottom: $footerHeightDouble // footer_height 
+  @extend %clearfix
+  // &:atfer
+  //   display: block
+  //   height: $footerHeightDouble
+  &_pg
+    padding-bottom: $footerHeightSingle
+    // &:after
+    //   height: $footerHeightSingle
+
+.wrap
+  max-width: 75rem
+  min-width: 20rem
+  width: 100%
+  margin: 0 auto
+  padding: 0 15px
+
+@media (min-width: 768px)
+  .wrap
+    width: 750px
+@media (min-width: 992px)
+  .wrap
+    width: 970px
+@media (min-width: 1200px)
+  .wrap 
+    width: 1170px
+
+.wrap-md
+  width: 970px
+.wrap-sm
+  width: 750px
+
+$cols: 12
+$maxWidth: 1200
+
+@function wrapWidthPx($col)
+  @return ($col * $maxWidth / $cols )+px
+
+@for $i from 1 through $cols
+  .wrap-#{$i}
+    width: wrapWidthPx($i)
+
+.row
+  padding: 15px 0
+
+.col
+  float: left
+  padding: 0 10px
+  margin: 0 auto
+
+//FLOAT
+$cols: 12
+$maxWidth: 1200
+@function colWidthPx($col)
+  @return ($col * $maxWidth / $cols )+px
+
+@function colWidth($col)
+  @return $col * 100% / $cols 
+
+@for $i from 1 through $cols
+  .col-lg-#{$i}
+    width: colWidth($i)
+
+@media screen and (max-width: 62rem) //992px
+  @for $i from 1 through $cols
+    .col-md-#{$i}
+      width: colWidth($i)
+  .col-md-hide
+    display: none
+@media screen and (max-width: 48rem) //768px
+  @for $i from 1 through $cols
+    .col-sm-#{$i}
+      width: colWidth($i)
+      padding: 0
+
+
+@media screen and (max-width: 40rem) //640px
+  @for $i from 1 through $cols
+    .col-xs-#{$i}
+      width: colWidth($i)
+      padding: 0
+  .col-sm-hide
+    display: none
+
+//FLEXBOX
+.flx
+  -webkit-box-flex: auto
+  -moz-flex: auto
+  -ms-flex: auto
+  flex: auto
+  overflow: hidden
+  padding: 0 10px
+  margin: 0 auto
+
+.flex-container
+  @extend .wrap
+  %dsp-flx
+    width: 100%
+    margin: 0 auto
+    display: -ms-flexbox
+    display: -mozt-box
+    display: -webkit-box
+    display: -webkit-flex
+    display: flex
+  -ms-flex-wrap: wrap
+  -ms-flex-direction: row
+  -webkit-flex-flow: row wrap
+  flex-flow: row wrap
+
+.flex-center
+  @extend %dsp-flx
+  align-items: center
+  justify-content: center
+
+@for $i from 1 through $cols
+  .flx-#{$i}
+    width: colWidthPx($i)
+    
+// //COLUMN GRID
+// .columns
+//   -webkit-column-gap: 1.5em
+//   -moz-column-gap: 1.5em
+//   column-gap: 1.5em
+// $columns: 12
+// @function columnsWidth($column)
+//   @return $column * 100% / $columns 
+
+// @for $i from 1 through $columns
+//   .columns-lg-#{$i}
+//     -webkit-columns: columnsWidth
+//     -moz-columns: columnsWidth
+//     columns: columnsWidth
+
+// @media screen and (max-width: 62rem) //992px
+//   .columns-md-#{$i}
+//   @for $i from 1 through $columns
+//   .columns-lg-#{$i}
+//     -webkit-columns: columnsWidth
+//     -moz-columns: columnsWidth
+//     columns: columnsWidth
+// @media screen and (max-width: 48rem) //768px
+//   .columns-sm-#{$i}
+//   @for $i from 1 through $columns
+//   .columns-lg-#{$i}
+//     -webkit-columns: columnsWidth
+//     -moz-columns: columnsWidth
+//     columns: columnsWidth
+// @media screen and (max-width: 40rem) //640px
+//   .columns-xs-#{$i}
+//   @for $i from 1 through $columns
+//   .columns-lg-#{$i}
+//     -webkit-columns: columnsWidth
+//     -moz-columns: columnsWidth
+//     columns: columnsWidth

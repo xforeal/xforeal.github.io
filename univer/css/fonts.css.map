@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAQ,qDAA6C;AAC7C,yCAAiC;AAGjC,8FAAsF;AACtF,0FAAkF",
+"sources": ["../sass/fonts.sass"],
+"names": [],
+"file": "fonts.css"
+}

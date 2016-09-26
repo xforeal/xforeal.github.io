@@ -1,0 +1,291 @@
+@charset "UTF-8";
+@import url("../fonts/font-awesome/font-awesome.css");
+@import url("../fonts/Roboto/Roboto.css");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700&subset=cyrillic");
+@import url("https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900");
+.center {
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+  display: block; }
+
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font: normal 16px/1 "RobotoRegular";
+  color: #333; }
+
+h3 {
+  font: 600 1.375em/1.1 "Lato", "RobotoRegular", "Open Sans", "Roboto Sald", Helvetica, sans-serif, Helvetica, sans-serif;
+  color: #000; }
+
+h2 {
+  font: 600 1.75em/1.1 "Lato", "RobotoRegular", "Open Sans", "Roboto Sald", Helvetica, sans-serif, Helvetica, sans-serif;
+  color: #000; }
+
+h1 {
+  font: 600 2em/1.1 "Lato", "RobotoRegular", "Open Sans", "Roboto Sald", Helvetica, sans-serif, Helvetica, sans-serif;
+  color: #000; }
+
+h1, h2, h3 {
+  margin: 20px 0 10px 0; }
+
+p {
+  font: 300 1em/1.4 "Lato", "RobotoRegular", "Open Sans", "Roboto Sald", Helvetica, sans-serif, Helvetica, sans-serif;
+  color: #333;
+  margin: 0 0 10px; }
+
+.p18 {
+  font: 300 1.125em/1.25 "RobotoRegular", Helvetica, sans-serif;
+  color: #333; }
+
+/* Reset browser sty;e */
+a {
+  text-decoration: none;
+  color: #333;
+  cursor: pointer; }
+
+img {
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+  cursor: pointer;
+  filter: grayscale(1);
+  -webkit-filter: grayscale(1); }
+  img:hover {
+    filter: grayscale(0);
+    -webkit-filter: grayscale(0); }
+
+.img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  margin: 0 auto; }
+  .img__wrap {
+    display: block;
+    position: relative;
+    margin-bottom: 0.5em; }
+  .img__overlay {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #000;
+    color: #fff;
+    padding: 10px; }
+  .img:hover + .img__overlay {
+    background: #03a9f4; }
+  .img__center {
+    width: 100%; }
+  .img_noGrayscale {
+    filter: grayscale(0);
+    -webkit-filter: grayscale(0); }
+
+address {
+  font-style: normal;
+  margin: 0; }
+
+li {
+  list-style-type: none; }
+
+/*  STYLES */
+.logo-text:after {
+  content: " ] ";
+  color: #03a9f4; }
+.logo-text:before {
+  content: " [ ";
+  color: #03a9f4; }
+
+.logo-text {
+  position: relative;
+  font-family: "RobotoBold";
+  font-weight: bold;
+  font-size: 3em;
+  text-align: center; }
+  .logo-text_sm {
+    display: block;
+    font-size: 2em;
+    margin-top: -5px; }
+  .logo-text_esm {
+    font-size: 1.25em;
+    margin: 0 5px; }
+
+.site-link {
+  position: relative;
+  display: block;
+  font-size: 1.25em;
+  margin-bottom: 5px; }
+  .site-link:before, .site-link:after {
+    content: " --- "; }
+
+.contact-block {
+  margin: 5px 0;
+  border-left: 1px solid #ccc;
+  padding-left: 1.5em; }
+
+.fa {
+  cursor: pointer; }
+
+.read-more {
+  display: block;
+  margin-top: 0.5em;
+  color: #03a9f4;
+  font-weight: bold; }
+  .read-more:before {
+    content: "READ MORE"; }
+  .read-more:hover {
+    color: #0286c2; }
+
+.category {
+  margin-right: 10px;
+  padding: 5px 10px;
+  background: #03a9f4;
+  color: #fff;
+  border-radius: 4px;
+  font-style: normal;
+  font-weight: bold; }
+  .category:hover {
+    background: #0286c2; }
+
+.border {
+  width: 100px;
+  height: 6px;
+  margin-bottom: 0.7em;
+  border: none;
+  background: #03a9f4; }
+  .border_middle {
+    display: inline-block;
+    margin: 0 auto; }
+
+.fieldset {
+  border: none;
+  border-top: 1px solid #03a9f4;
+  text-align: center;
+  margin-top: 1em; }
+  .fieldset h1 {
+    font: 600 1.875em/1 "Roboto Slab", Helvetica, sans-serif;
+    color: #000; }
+  .fieldset__legend {
+    padding: 0 15px; }
+
+.float-l {
+  float: left; }
+
+.float-r {
+  float: right; }
+
+.text-indent {
+  text-indent: 1.5em; }
+
+.text-r {
+  text-align: right; }
+
+.text-l {
+  text-align: left; }
+
+.text-j {
+  text-align: justify; }
+
+.text-c {
+  text-align: center; }
+
+.right-line {
+  border-right: 2px solid #fff;
+  padding-right: 1em; }
+
+.bottom-line {
+  border-bottom: 2px solid #03a9f4;
+  padding-bottom: 1em; }
+
+.bg-w {
+  background: linear-gradient(#fff, transparent);
+  border-radius: 5px;
+  padding: 1em; }
+
+.frstLetter {
+  text-indent: 0; }
+  .frstLetter:first-letter {
+    float: left;
+    margin: -0.25em 8px -0.5em 0;
+    color: #03a9f4;
+    font-size: 5em;
+    font-weight: bold; }
+
+.ul__list {
+  position: relative;
+  font: 400 1.125em/1.1 "RobotoRegular", Helvetica, sans-serif;
+  color: #333;
+  margin-bottom: 1em; }
+  .ul__list:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -25px;
+    font-family: "FontAwesome";
+    color: #03a9f4; }
+
+.columns-2 {
+  -webkit-columns: 2;
+  -moz-columns: 2;
+  columns: 2;
+  -webkit-column-gap: 1.5em;
+  -moz-column-gap: 1.5em;
+  column-gap: 1.5em; }
+.columns-3 {
+  -webkit-columns: 3;
+  -moz-columns: 3;
+  columns: 3;
+  -webkit-column-gap: 1.5em;
+  -moz-column-gap: 1.5em;
+  column-gap: 1.5em; }
+
+.data {
+  display: inline-block;
+  color: #ffb606;
+  font-weight: bold;
+  font-family: "RobotoRegular";
+  cursor: pointer; }
+  .data__day {
+    display: block;
+    font-size: 2.5em;
+    line-height: 1; }
+    .data__day:before {
+      content: "["; }
+    .data__day:after {
+      content: "]"; }
+
+@media screen and (max-width: 62rem) {
+  font-size: 16px; }
+@media screen and (max-width: 48rem) {
+  font-size: 16px; }
+@media screen and (max-width: 40rem) {
+  .logo-text {
+    font-size: 1.5em; }
+
+  .site-link:after, .site-link:before {
+    content: " "; }
+
+  .footer__bottom-footer .col {
+    text-align: left;
+    border: 0; }
+
+  .nav-menu {
+    text-align: left;
+    max-height: 0; }
+
+  .show-nav-menu {
+    max-height: 20em; }
+
+  .toggle-nav-menu {
+    display: block; } }
+.header-menu-l {
+  width: 100%; }
+  .header-menu-l li {
+    display: inline-block; }
+
+.main-content {
+  margin-top: 0.6em; }
+
+/*# sourceMappingURL=styles.css.map */
