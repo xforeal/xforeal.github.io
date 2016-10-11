@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'Gotham Book Condensed';
+    src: url('gotham-book-condensed.eot?#iefix') format('embedded-opentype'),
+        url('gotham-book-condensed.otf')  format('opentype'),
+        url('gotham-book-condensed.woff') format('woff'),
+        url('gotham-book-condensed.ttf')  format('truetype'),
+        url('gotham-book-condensed.svg#Gotham-Book-Condensed') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

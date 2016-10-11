@@ -1,0 +1,95 @@
+@import "fonts"
+@import "const"
+@import "grid"
+
+// ICON BLOCK BIG
+$urlIconBig: url('../i/ct-insp-2015-spring-winter-tires-icons-sprite_big.png')
+$urlIconSmall: url('../i/ct-insp-2015-spring-winter-tires-icons-sprite_small.png')
+$iconWidthBig: 36px
+$iconHeightBig: 36px
+$iconGapBig: 3px
+$iconWidthSmall: 28px
+$iconHeightSmall: 28px
+$iconGapSmall: 0
+$x: 0
+$y: 0
+$bg-color: #fff
+
+@function bgIconPositionBig($i)
+  $y: $y
+  @if $i>1
+    $y: - $iconHeightBig * ($i - 1) - $iconGapBig
+  $backgroundBig: $bg-color $urlIconBig no-repeat $x $y
+  @return $backgroundBig
+
+@function bgIconPositionSmall($i)
+  $y: $y
+  @if $i>1
+    $y: - $iconHeightSmall * ($i - 1) - $iconGapSmall
+  $backgroundSmall: $bg-color $urlIconSmall no-repeat $x $y
+  @return $backgroundSmall
+
+
+.icon-block
+  .icon
+    display: inline-block
+    margin-bottom: 10px
+    text-transform: uppercase
+    +font(normal, 25, 30, $GB, $black)
+
+    &_big
+      &::before
+        content: " "
+        display: inline-block
+        vertical-align: middle
+        margin-right: 5px
+        width: 36px
+        height: 36px
+        border-radius: 100%
+        background: bgIconPositionBig(0)
+
+      &:nth-of-type(1)::before
+        background: bgIconPositionBig(1)
+      &:nth-of-type(3)::before
+        background: bgIconPositionBig(2)
+      &:nth-of-type(5)::before
+        background: bgIconPositionBig(3)
+      &:nth-of-type(2)::before
+        background: bgIconPositionBig(4)
+      &:nth-of-type(4)::before
+        background: bgIconPositionBig(5)
+      &:nth-of-type(6)::before
+        background: bgIconPositionBig(6)
+
+    &_l
+      width: 130px
+    &_r
+      width: 300px
+
+    &_small
+      +font(normal, 17, 20, $GB, $white)
+      width: 140px
+      text-align: right
+      margin-bottom: 10px
+      &::after
+        content: " "
+        display: inline-block
+        vertical-align: middle
+        margin-left: 10px
+        width: 28px
+        height: 28px
+        border-radius: 100%
+        background: bgIconPositionSmall(0)
+      &:nth-of-type(1)::after
+        background: bgIconPositionSmall(1)
+      &:nth-of-type(2)::after
+        background: bgIconPositionSmall(2)
+      &:nth-of-type(3)::after
+        background: bgIconPositionSmall(3)
+      &:nth-of-type(4)::after
+        background: bgIconPositionSmall(4)
+      &:nth-of-type(5)::after
+        background: bgIconPositionSmall(5)
+        margin-top: -25px
+      &:nth-of-type(6)::after
+        background: bgIconPositionSmall(6)

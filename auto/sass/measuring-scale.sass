@@ -1,0 +1,82 @@
+@import "fonts"
+@import "const"
+@import "grid"
+
+// MEASURING SCALE
+.measuring
+  display: inline-block
+  position: relative
+  &-scale
+    width: 100px
+    height: 22px
+    display: inline-block
+    vertical-align: middle
+    position: relative
+    margin: 0 5px
+    border: 1px solid $black
+    background: repeating-linear-gradient( 90deg, $black, $black 1px, transparent 1px, transparent 1em)
+    background-color: $white
+    &_percent
+      position: absolute
+      top: 20px
+      left: 115px
+      font-family: $GM
+      font-style: normal
+      margin-top: -20px
+      padding-bottom: 20px
+    &_bg
+      position: absolute
+      top: 0px
+      left: 0px
+      display: inline-block
+      height: 20px
+      width: 100px
+      background: repeating-linear-gradient( 90deg, $black, $black 1px, transparent 1px, transparent 1em)
+      background-color: $blue-scale
+      &:hover
+        background-color: $orange
+  &:hover
+    color: $blue-scale
+
+.pct-dry
+  &_cooper
+    width: 97.4%
+  &_motoMaster
+    width: 94.5%
+  &_goodyear
+    width: 97.6%
+.pct-wet
+  &_cooper
+    width: 100%
+  &_motoMaster
+    width: 91%
+  &_goodyear
+    width: 91.7%
+.pct-ice
+  &_cooper
+    width: 97.1%
+  &_motoMaster
+    width: 71.8%
+  &_goodyear
+    width: 92.2%
+.pct-snow
+  &_cooper
+    width: 99.7%
+  &_motoMaster
+    width: 100%
+  &_goodyear
+    width: 86.5%
+.pct-fuel
+  &_cooper
+    width: 100%
+  &_motoMaster
+    width: 89.4%
+  &_goodyear
+    width: 89.9%
+.pct-comfort
+  &_cooper
+    width: 100%
+  &_motoMaster
+    width: 92.6%
+  &_goodyear
+    width: 82.2%

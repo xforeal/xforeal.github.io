@@ -1,0 +1,42 @@
+@import "fonts"
+@import "const"
+@import "grid"
+
+// TABLE
+.table
+  float: right
+  width: 374px
+  height: 228px
+  margin-left: 10px
+  border-collapse: collapse
+  text-transform: uppercase
+  +font(normal, 16, 20, $GLC, $white)
+
+  &-head
+    background: #231f20
+
+  &-body > &__row
+    &:nth-of-type(1)
+      background: $gray
+      &:hover
+        background: darken($gray, 15%)
+
+    &:nth-of-type(2)
+      background: $green
+      &:hover
+        background: darken($green, 15%)
+
+    &:nth-child(3)
+      background: $yellow
+      &:hover
+        background: darken($yellow, 15%) 
+
+    &:nth-child(4)
+      background: $orange
+      &:hover
+        background: darken($orange, 15%)
+
+  td, th
+    padding: 5px
+    padding-left: 10px
+    border: 2px solid $white
