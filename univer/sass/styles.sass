@@ -85,11 +85,18 @@ img
   max-width: 100%
   margin: 0 auto
   cursor: pointer
-  filter: grayscale(1)
+  -moz-filter: grayscale(1)
   -webkit-filter: grayscale(1)
+  -o-filter: grayscale(1)
+  -ms-filter: grayscale(1)
+  filter: grayscale(1) 
   &:hover
-    filter: grayscale(0)
+    -moz-filter: grayscale(0)
     -webkit-filter: grayscale(0)
+    -o-filter: grayscale(0)
+    -ms-filter: grayscale(0)
+    filter: grayscale(0) 
+
 
 .img
   max-width: 100%
@@ -109,6 +116,8 @@ img
     background: #000
     color: #fff
     padding: 10px
+    &_b
+      background: $clrDeepSkyBlue
   &:hover + &__overlay
     background: $clrDeepSkyBlue
   &__center
@@ -191,6 +200,7 @@ li
   margin-bottom: 0.7em
   border: none
   background: $clrDeepSkyBlue
+  text-align: left
   &_middle
     display: inline-block
     margin: 0 auto
@@ -204,6 +214,8 @@ li
     +font(600, 30, 1, $RS, #000)
   &__legend
     padding: 0 15px
+    width: auto
+    margin: 0 auto
 
 .float-l
   float: left
