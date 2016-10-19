@@ -1,0 +1,45 @@
+@import "var"
+
+@font-face
+  font-family: 'PTSans Bold'
+  src: url('../fonts/PT_Sans-Bold/PT_Sans-Bold.eot')
+  src: local('../fonts/PT_Sans-Bold'), url('../fonts/PT_Sans-Bold/PT_Sans-Bold.woff') format('woff'), url('../fonts/PT_Sans-Bold/PT_Sans-Bold.ttf') format('truetype'), url('../fonts/PT_Sans-Bold/PT_Sans-Bold.svg') format('svg')
+  font-weight: normal
+  font-style: normal
+
+@font-face
+  font-family: 'PTSans Regular'
+  src: url('../fonts/PT_Sans-Regular.eot')
+  src: local('../fonts/PT_Sans-Regular'), url('../fonts/PT_Sans-Regular/PT_Sans-Regular.woff') format('woff'), url('../fonts/PT_Sans-Regular/PT_Sans-Regular.ttf') format('truetype'), url('../fonts/PT_Sans-Regular/PT_Sans-Regular.svg') format('svg')
+  font-weight: normal
+  font-style: normal
+
+@font-face 
+  font-family: 'Conv_PT_Serif-Regular'
+  src: url('fonts/PT_Serif-Regular/PT_Serif-Regular.eot')
+  src: local('../fonts/PT_Serif-Regular'), url('fonts/PT_Serif-Regular/PT_Serif-Regular.woff') format('woff'), url('fonts/PT_Serif-Regular/PT_Serif-Regular.ttf') format('truetype'), url('fonts/PT_Serif-Regular/PT_Serif-Regular.svg') format('svg')
+  font-weight: normal
+  font-style: normal
+
+// Fonts Mixin
+=font($font-weight, $font-size, $line-height, $font-family, $color)
+  $ff: '' + $font-family + ''
+  font: $font-weight $font-size + px / $line-height +px $ff
+  color: $color
+
+html
+  text-size-adjust: 100%
+
+body
+  +font(normal, 14, 18, PTSans Regular, $gray3)
+
+.heading-1
+  +font(300, 30, 30, PTSerif Regular, $red)
+.heading-2
+  +font(lighter, 24, 30, PTSans Regular, $blue)
+.heading-3
+  +font(lighter, 18, 30, PTSans Bold, $indigo)
+  text-transform: uppercase
+.heading-4
+  +font(normal, 18, 20, PTSans Regular, $blue)
+  margin-top: 1.875em //30px

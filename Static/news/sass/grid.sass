@@ -1,0 +1,90 @@
+/* Reset */
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  appearance: none
+  outline: none
+
+a
+  text-decoration: none
+  color: inherit
+
+img
+  max-width: 100%
+  width: 100%
+
+%clearfix
+  &::after
+    content: " "
+    clear: both
+    display: table 
+
+.page-wrap, 
+.row, 
+.slider,
+.img-box
+  @extend %clearfix
+  overflow: hidden
+
+html
+  height: 100% // for sticky footer
+  font-size: 16px // grid base count 16px = 1rem
+
+$cols: 12
+$col-gap: 20px
+$page-wrap: 940px
+
+@function colWidth($col)
+  @return $col * 100% / $cols
+
+@for $i from 1 through $cols
+  .col-#{$i}
+    width: colWidth($i)
+
+.col
+  float: left
+  & + &
+    margin-right: $col-gap
+
+@media screen and(max-width: 480px)
+  @for $i from 1 through $cols
+    .col-sm-#{$i}
+      width: colWidth($i)
+
+@media screen and(max-width: 720px)
+  @for $i from 1 through $cols
+    .col-md-#{$i}
+      width: colWidth($i)
+
+@media screen and(max-width: 960px)
+  @for $i from 1 through $cols
+    .col-lg-#{$i}
+      width: colWidth($i)
+
+.page-wrap
+  max-width: 58.75rem //940px
+  width: 100%
+  margin: auto
+  margin-top: 1.875em
+
+.main
+  float: left
+  width: 65.9575% //620px
+  margin-right: 1.25em //20px
+ 
+.aside
+  float: left
+  width: 31.9149% //300px
+      
+.col-l
+  float: left
+  margin-right: 1.25em //20px
+  width: 23.75rem //380px
+ 
+.col-r
+  float: left
+  width: 13.75rem //220px
+  
+    

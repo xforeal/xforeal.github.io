@@ -1,0 +1,90 @@
+@charset "UTF-8";
+.gray {
+  color: #333333;
+  border-color: #333333; }
+
+.icon_play, .icon_photo {
+  display: block;
+  position: absolute;
+  bottom: 10px;
+  left: 5px;
+  width: 24px;
+  height: 18px;
+  text-align: center;
+  font-style: normal; }
+
+.icon_play::before, .icon_play-inline::before {
+  content: "▶";
+  color: #fff;
+  font-size: 20px; }
+
+.icon_play {
+  line-height: 15px;
+  border-radius: 4px;
+  background: #6a0099;
+  border: 2px solid #fff; }
+.icon_play-inline {
+  display: inline-block;
+  width: 18px;
+  height: 12px;
+  line-height: 14px;
+  background: #333333;
+  border-radius: 3px;
+  font-style: normal;
+  text-align: center; }
+  .icon_play-inline::before {
+    font-size: 14px; }
+  .icon_play-inline:hover {
+    background: #c80000; }
+.icon_photo {
+  background: url("../img/spritesheet.png") no-repeat -2px -25px; }
+.icon_photo-inline {
+  display: inline-block;
+  width: 24px;
+  height: 16px;
+  background: url("../img/spritesheet.png") no-repeat -2px -84px; }
+
+@font-face {
+  font-family: "PTSans Bold";
+  src: url("../fonts/PT_Sans-Bold/PT_Sans-Bold.eot");
+  src: local("../fonts/PT_Sans-Bold"), url("../fonts/PT_Sans-Bold/PT_Sans-Bold.woff") format("woff"), url("../fonts/PT_Sans-Bold/PT_Sans-Bold.ttf") format("truetype"), url("../fonts/PT_Sans-Bold/PT_Sans-Bold.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: "PTSans Regular";
+  src: url("../fonts/PT_Sans-Regular.eot");
+  src: local("../fonts/PT_Sans-Regular"), url("../fonts/PT_Sans-Regular/PT_Sans-Regular.woff") format("woff"), url("../fonts/PT_Sans-Regular/PT_Sans-Regular.ttf") format("truetype"), url("../fonts/PT_Sans-Regular/PT_Sans-Regular.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: "Conv_PT_Serif-Regular";
+  src: url("fonts/PT_Serif-Regular/PT_Serif-Regular.eot");
+  src: local("../fonts/PT_Serif-Regular"), url("fonts/PT_Serif-Regular/PT_Serif-Regular.woff") format("woff"), url("fonts/PT_Serif-Regular/PT_Serif-Regular.ttf") format("truetype"), url("fonts/PT_Serif-Regular/PT_Serif-Regular.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+html {
+  text-size-adjust: 100%; }
+
+body {
+  font: normal 14px/18px "PTSans Regular";
+  color: #333333; }
+
+.heading-1 {
+  font: 300 30px/30px "PTSerif Regular";
+  color: #c80000; }
+
+.heading-2 {
+  font: lighter 24px/30px "PTSans Regular";
+  color: #3d76cc; }
+
+.heading-3 {
+  font: lighter 18px/30px "PTSans Bold";
+  color: #6a0099;
+  text-transform: uppercase; }
+
+.heading-4 {
+  font: normal 18px/20px "PTSans Regular";
+  color: #3d76cc;
+  margin-top: 1.875em; }
+
+/*# sourceMappingURL=fonts.css.map */

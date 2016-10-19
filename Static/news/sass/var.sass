@@ -1,0 +1,65 @@
+// Colors
+$gray: #ccc
+$gray3: #333333
+$blue: #3d76cc
+$red: #c80000 
+$sliderBg: #f7f9fa
+$headerBg: #d7d8d9
+$indigo: #6a0099
+
+.gray
+  color: $gray3
+  border-color: $gray3 
+
+%icon
+  display: block
+  position: absolute
+  bottom: 10px
+  left: 5px
+  width: 24px
+  height: 18px
+  text-align: center
+  font-style: normal
+
+%triangle
+  content: '\25b6'
+  color: #fff
+  font-size: 20px
+
+.icon
+  &_play
+    @extend %icon
+    line-height: 15px
+    border-radius: 4px
+    background: $indigo
+    border: 2px solid #fff
+    &::before
+      @extend %triangle
+
+  &_play-inline
+    display: inline-block
+    width: 18px
+    height: 12px
+    line-height: 14px
+    background: $gray3
+    border-radius: 3px
+    font-style: normal
+    text-align: center
+    &::before
+      @extend %triangle
+      font-size: 14px
+    &:hover
+      background: $red
+      
+  &_photo
+    @extend %icon
+    background: url('../img/spritesheet.png') no-repeat -2px -25px
+
+  &_photo-inline
+    display: inline-block
+    width: 24px
+    height: 16px
+    background: url('../img/spritesheet.png') no-repeat -2px -84px
+
+
+
