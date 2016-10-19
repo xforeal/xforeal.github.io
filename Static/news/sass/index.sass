@@ -1,0 +1,131 @@
+@import "var"
+@import "fonts"
+@import "grid"
+
+// Nav -menu Header
+.nav-menu
+  background: $headerBg
+  margin-bottom: 20px
+  &__link
+    display: inline-block
+    padding: 5px 10px
+    & + &
+      margin-right: 20px
+    +font(normal, 18, 19, PTSans Regular, $gray3)
+    &:hover
+      background: $gray3
+      color: #fff
+    &_active
+      background: $gray3
+      color: #fff
+      &:hover
+        background: $headerBg
+        color: $gray3
+
+// Slider
+.slider
+  border-bottom: 5px solid $red
+  background: $sliderBg
+  max-height: 15.9375rem //255px
+  &__caption
+    padding: 15px
+  &__img
+    display: block
+    float: left
+    margin-right: 15px
+  &__title
+    padding-bottom: 10px
+
+// IMG-box
+.img-box
+  @extend %clearfix
+  cursor: pointer
+  margin-bottom: 5px
+
+  &__img
+    min-width: 8.875rem //142px
+    float: left
+    margin-right: 10px
+    position: relative
+    &_block
+      display: block
+      position: relative
+
+  &__caption
+    +font(normal, 14, 20, PTSans Bold, $gray3)
+    &_normal
+      font-weight: normal
+    &_18
+      +font(normal, 18, 20, PTSans Bold, $gray3)
+      margin-bottom: 20px
+
+  &:hover, &_inline:hover, &_gallery:hover
+    .img-box__caption, .img-box__caption_normal, .img-box__caption_18
+      color: $blue
+    .img-box__img img
+      filter: grayscale(1)
+    .icon_play
+      background: $red
+      box-shadow: inset 0 0 5px 1px darken($red, 20%)
+
+  &_inline
+    width: 8.875rem //142px
+    display: inline-block
+    vertical-align: top
+    & + &
+      margin-left: 13px
+
+// Newsblock
+.news
+  &__item
+    margin-left: 15px
+    & + &
+      margin-top: 10px
+    a:hover
+      color: $blue
+      text-decoration: underline
+
+.top-newsfeed
+  @extend %clearfix
+  margin-bottom: 10px
+  &__img
+    width: 6.25rem //100px
+    float: left
+    margin-right: 10px
+    &:hover
+      filter: grayscale(1)
+  &__content
+    font-weight: bold
+    padding-top: 10px
+    &:hover
+      color: $blue
+
+//Custom styles
+.fieldset
+  &__heading
+    border: none
+    border-top: 2px solid $red
+    margin: 1.875em 0 0.625em 0
+    line-height: 20px
+    &_middle
+      border: none
+      border-top: 2px solid $gray3
+      margin-bottom: 0.625em
+      
+  &__title
+    display: inline-block
+    vertical-align: bottom
+    padding-right: 5px
+    margin-top: -30px
+    &_center
+      text-align: center
+      padding: 0 10px
+
+.hr
+  height: 5px
+  margin-top: 5px
+  background: $gray3
+  border: none
+
+
+
