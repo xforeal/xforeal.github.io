@@ -1,0 +1,90 @@
+@import "fonts"
+@import "const"
+@import "grid"
+
+// BG
+$imgURL: 'i/ct-insp-2015-spring-winter-tires'
+.grid__column_main .grid__col
+  &:nth-child(1)
+    background: url('../#{$imgURL}-tab-1-img-1.jpg')
+  &:nth-child(2)
+    background: url('../#{$imgURL}-tab-1-img-9.jpg')
+  &:nth-child(3)
+    background: url('../#{$imgURL}-tab-3-img-3.jpg')
+  &:nth-child(4)
+    background: url('../#{$imgURL}-tab-3-img-4.jpg')
+  &:nth-child(5)
+    background: url('../#{$imgURL}-tab-3-img-5.jpg')
+  &:nth-child(6)
+    background: url('../#{$imgURL}-tab-1-img-9.jpg')
+
+.grid__column_sidebar .grid__col
+  &:nth-child(1)
+    background: url('../#{$imgURL}-tab-3-video-1.jpg')
+  &:nth-child(2)
+    background: $blue-bg
+  &:nth-child(3)
+    background: url('../#{$imgURL}-tab-3-video-3.jpg')
+  &:nth-child(4)
+    background: url('../#{$imgURL}-tab-3-video-4.jpg')
+  &:nth-child(5)
+    background: url('../#{$imgURL}-tab-3-video-5.jpg')
+  &:nth-child(6)
+    background: $blue-bg
+
+// Box
+[class*="box__heading"]
+  text-transform: uppercase
+  margin-bottom: 5px
+
+.box
+  padding: 35px 25px 0 25px
+  position: relative
+  @extend %clearfix
+
+  &__check-tire
+    padding-top: 30px
+
+  &_video
+    padding: 0 15px 30px
+
+  &_all-terrain
+    padding-right: 0
+
+  &__heading_1
+    +font(normal, 50, 40, $GMC, $white)
+
+  &__heading_2
+    +font(normal, 46, 40, $GMC, $white)
+
+  &__heading_3
+    +font(normal, 25, 25, $GMC, $white)
+    margin-bottom: 30px
+    margin-top: 220px
+    text-align: center
+
+  &__heading_4
+    +font(normal, 20, 25, $GB, $blue-link)
+    text-transform: initial
+
+  &__link
+    display: inline-block
+    text-transform: uppercase
+    +font(normal, 16, 25, $GB, $black)
+    &:hover
+      color: $blue-bg
+    &_w
+      color: $white
+      &:hover
+        color: $white
+        box-shadow: 0 1px 0 0 $white, 0 -1px 0 0 $white
+        
+    &::after
+      content: '\203a'
+      margin: 0 5px
+      font-size: 20px
+
+  &__caption
+    +font(300, 17, normal, $GLR, $white)
+    margin-bottom: 10px
+    

@@ -1,0 +1,196 @@
+@include: url('../fonts/fonts-all.css');
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-size: 16px; }
+
+body {
+  font-family: "Gotham Light Regular", sans-serif;
+  font-size: 17px;
+  line-height: 25px;
+  color: #fff; }
+
+@include: url('../fonts/fonts-all.css');
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-size: 16px; }
+
+body {
+  font-family: "Gotham Light Regular", sans-serif;
+  font-size: 17px;
+  line-height: 25px;
+  color: #fff; }
+
+.fl-l {
+  float: left;
+  padding-right: 15px; }
+
+.color-b {
+  color: #000; }
+
+.margin-def_1 {
+  margin-top: -20px; }
+.margin-def_2 {
+  top: 10px; }
+
+.sup_big {
+  font-size: 25px;
+  margin-left: 5px; }
+.sup_small {
+  font-size: 15px;
+  margin-left: 2px; }
+
+.fuel {
+  font-style: normal;
+  padding-right: 35px; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+img {
+  max-width: 100%; }
+
+.grid__wrapper::after, .img-tabs::after, .grid__wrapper::before, .img-tabs::before {
+  content: " ";
+  display: table;
+  clear: both; }
+
+html {
+  height: 100%;
+  font: 16px/1.1 "Open Sans", Helvetica, sans-serif;
+  color: #000; }
+
+.w-1 {
+  width: 272px; }
+
+.h-1 {
+  max-height: 272px;
+  height: 272px; }
+
+.w-2 {
+  width: 544px; }
+
+.h-2 {
+  max-height: 554px;
+  height: 554px; }
+
+.w-3 {
+  width: 826px; }
+
+.h-3 {
+  max-height: 826px;
+  height: 826px; }
+
+.grid {
+  max-width: 75rem;
+  min-width: 20rem;
+  width: 100%;
+  margin: 1em auto; }
+  .grid__wrapper {
+    width: 1118px;
+    margin: auto; }
+  .grid__column {
+    float: left;
+    background: #f3f3f3; }
+    .grid__column_main {
+      width: 836px; }
+    .grid__column_sidebar {
+      width: 272px; }
+  .grid__col {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    float: left;
+    cursor: pointer; }
+    .grid__col:hover {
+      -webkit-filter: saturate(2);
+      filter: saturate(2); }
+
+[class*='h-'] {
+  overflow: hidden; }
+
+.fl-l {
+  float: left;
+  padding-right: 15px; }
+
+.color-b {
+  color: #000; }
+
+.margin-def_1 {
+  margin-top: -20px; }
+.margin-def_2 {
+  top: 10px; }
+
+.sup_big {
+  font-size: 25px;
+  margin-left: 5px; }
+.sup_small {
+  font-size: 15px;
+  margin-left: 2px; }
+
+.fuel {
+  font-style: normal;
+  padding-right: 35px; }
+
+.header {
+  background: rgba(0, 0, 0, 0.9); }
+
+.header-title {
+  font: normal 27px/38px "Gotham Medium", sans-serif;
+  color: #fff;
+  padding: 30px 0;
+  text-align: center; }
+
+.img-tabs {
+  display: inline-block;
+  position: relative;
+  overflow: hidden; }
+  .img-tabs__wrap {
+    width: 1020px;
+    height: 215px;
+    margin: 0 auto; }
+  .img-tabs__bg {
+    border: 9px solid #eaeaea;
+    border-radius: 5px; }
+  .img-tabs__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 210px;
+    padding: 60px 25px;
+    background: rgba(0, 0, 0, 0.5);
+    font: 600 30px/35px "Gotham Book Narrow", sans-serif;
+    color: #fff;
+    text-transform: uppercase; }
+    .img-tabs__overlay:hover {
+      background: transparent;
+      text-shadow: -1px -1px 3px #000; }
+  .img-tabs__title_icon-1:before, .img-tabs__title_icon-2:before, .img-tabs__title_icon-3:before {
+    content: " ";
+    display: block;
+    float: left;
+    margin-right: 10px;
+    width: 80px;
+    height: 80px;
+    border: 3px solid #fff;
+    border-radius: 100%;
+    background: rgba(0, 0, 0, 0.5) url("../i/header-icon1-car.png") no-repeat 50% 50%; }
+  .img-tabs__title_icon-2:before {
+    background: rgba(0, 0, 0, 0.5) url("../i/header-icon2-car.png") no-repeat 50% 50%; }
+  .img-tabs__title_icon-3:before {
+    background: rgba(0, 0, 0, 0.5) url("../i/header-icon3-car.png") no-repeat 50% 50%; }
+
+.active {
+  background: transparent;
+  text-shadow: -1px -1px 3px #000; }
+  .active:hover {
+    background: rgba(0, 0, 0, 0.5); }
+
+/*# sourceMappingURL=header.css.map */

@@ -1,0 +1,1305 @@
+@charset "UTF-8";
+@include: url('../fonts/fonts-all.css');
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-size: 16px; }
+
+body {
+  font-family: "Gotham Light Regular", sans-serif;
+  font-size: 17px;
+  line-height: 25px;
+  color: #fff; }
+
+.fl-l {
+  float: left;
+  padding-right: 15px; }
+
+.color-b {
+  color: #000; }
+
+.margin-def_1 {
+  margin-top: -20px; }
+.margin-def_2 {
+  top: 10px; }
+
+.sup_big {
+  font-size: 25px;
+  margin-left: 5px; }
+.sup_small {
+  font-size: 15px;
+  margin-left: 2px; }
+
+.fuel {
+  font-style: normal;
+  padding-right: 35px; }
+
+@include: url('../fonts/fonts-all.css');
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-size: 16px; }
+
+body {
+  font-family: "Gotham Light Regular", sans-serif;
+  font-size: 17px;
+  line-height: 25px;
+  color: #fff; }
+
+.fl-l {
+  float: left;
+  padding-right: 15px; }
+
+.color-b {
+  color: #000; }
+
+.margin-def_1 {
+  margin-top: -20px; }
+.margin-def_2 {
+  top: 10px; }
+
+.sup_big {
+  font-size: 25px;
+  margin-left: 5px; }
+.sup_small {
+  font-size: 15px;
+  margin-left: 2px; }
+
+.fuel {
+  font-style: normal;
+  padding-right: 35px; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+img {
+  max-width: 100%; }
+
+.grid__wrapper::after, .img-tabs::after, .box::after, .grid__wrapper::before, .img-tabs::before, .box::before {
+  content: " ";
+  display: table;
+  clear: both; }
+
+html {
+  height: 100%;
+  font: 16px/1.1 "Open Sans", Helvetica, sans-serif;
+  color: #000; }
+
+.w-1 {
+  width: 272px; }
+
+.h-1 {
+  max-height: 272px;
+  height: 272px; }
+
+.w-2 {
+  width: 544px; }
+
+.h-2 {
+  max-height: 554px;
+  height: 554px; }
+
+.w-3 {
+  width: 826px; }
+
+.h-3 {
+  max-height: 826px;
+  height: 826px; }
+
+.grid {
+  max-width: 75rem;
+  min-width: 20rem;
+  width: 100%;
+  margin: 1em auto; }
+  .grid__wrapper {
+    width: 1118px;
+    margin: auto; }
+  .grid__column {
+    float: left;
+    background: #f3f3f3; }
+    .grid__column_main {
+      width: 836px; }
+    .grid__column_sidebar {
+      width: 272px; }
+  .grid__col {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    float: left;
+    cursor: pointer; }
+    .grid__col:hover {
+      -webkit-filter: saturate(2);
+      filter: saturate(2); }
+
+[class*='h-'] {
+  overflow: hidden; }
+
+@include: url('../fonts/fonts-all.css');
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-size: 16px; }
+
+body {
+  font-family: "Gotham Light Regular", sans-serif;
+  font-size: 17px;
+  line-height: 25px;
+  color: #fff; }
+
+@include: url('../fonts/fonts-all.css');
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-size: 16px; }
+
+body {
+  font-family: "Gotham Light Regular", sans-serif;
+  font-size: 17px;
+  line-height: 25px;
+  color: #fff; }
+
+.fl-l {
+  float: left;
+  padding-right: 15px; }
+
+.color-b {
+  color: #000; }
+
+.margin-def_1 {
+  margin-top: -20px; }
+.margin-def_2 {
+  top: 10px; }
+
+.sup_big {
+  font-size: 25px;
+  margin-left: 5px; }
+.sup_small {
+  font-size: 15px;
+  margin-left: 2px; }
+
+.fuel {
+  font-style: normal;
+  padding-right: 35px; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+img {
+  max-width: 100%; }
+
+.grid__wrapper::after, .img-tabs::after, .box::after, .grid__wrapper::before, .img-tabs::before, .box::before {
+  content: " ";
+  display: table;
+  clear: both; }
+
+html {
+  height: 100%;
+  font: 16px/1.1 "Open Sans", Helvetica, sans-serif;
+  color: #000; }
+
+.w-1 {
+  width: 272px; }
+
+.h-1 {
+  max-height: 272px;
+  height: 272px; }
+
+.w-2 {
+  width: 544px; }
+
+.h-2 {
+  max-height: 554px;
+  height: 554px; }
+
+.w-3 {
+  width: 826px; }
+
+.h-3 {
+  max-height: 826px;
+  height: 826px; }
+
+.grid {
+  max-width: 75rem;
+  min-width: 20rem;
+  width: 100%;
+  margin: 1em auto; }
+  .grid__wrapper {
+    width: 1118px;
+    margin: auto; }
+  .grid__column {
+    float: left;
+    background: #f3f3f3; }
+    .grid__column_main {
+      width: 836px; }
+    .grid__column_sidebar {
+      width: 272px; }
+  .grid__col {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    float: left;
+    cursor: pointer; }
+    .grid__col:hover {
+      -webkit-filter: saturate(2);
+      filter: saturate(2); }
+
+[class*='h-'] {
+  overflow: hidden; }
+
+.fl-l {
+  float: left;
+  padding-right: 15px; }
+
+.color-b {
+  color: #000; }
+
+.margin-def_1 {
+  margin-top: -20px; }
+.margin-def_2 {
+  top: 10px; }
+
+.sup_big {
+  font-size: 25px;
+  margin-left: 5px; }
+.sup_small {
+  font-size: 15px;
+  margin-left: 2px; }
+
+.fuel {
+  font-style: normal;
+  padding-right: 35px; }
+
+.header {
+  background: rgba(0, 0, 0, 0.9); }
+
+.header-title {
+  font: normal 27px/38px "Gotham Medium", sans-serif;
+  color: #fff;
+  padding: 30px 0;
+  text-align: center; }
+
+.img-tabs {
+  display: inline-block;
+  position: relative;
+  overflow: hidden; }
+  .img-tabs__wrap {
+    width: 1020px;
+    height: 215px;
+    margin: 0 auto; }
+  .img-tabs__bg {
+    border: 9px solid #eaeaea;
+    border-radius: 5px; }
+  .img-tabs__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 210px;
+    padding: 60px 25px;
+    background: rgba(0, 0, 0, 0.5);
+    font: 600 30px/35px "Gotham Book Narrow", sans-serif;
+    color: #fff;
+    text-transform: uppercase; }
+    .img-tabs__overlay:hover {
+      background: transparent;
+      text-shadow: -1px -1px 3px #000; }
+  .img-tabs__title_icon-1:before, .img-tabs__title_icon-2:before, .img-tabs__title_icon-3:before {
+    content: " ";
+    display: block;
+    float: left;
+    margin-right: 10px;
+    width: 80px;
+    height: 80px;
+    border: 3px solid #fff;
+    border-radius: 100%;
+    background: rgba(0, 0, 0, 0.5) url("../i/header-icon1-car.png") no-repeat 50% 50%; }
+  .img-tabs__title_icon-2:before {
+    background: rgba(0, 0, 0, 0.5) url("../i/header-icon2-car.png") no-repeat 50% 50%; }
+  .img-tabs__title_icon-3:before {
+    background: rgba(0, 0, 0, 0.5) url("../i/header-icon3-car.png") no-repeat 50% 50%; }
+
+.active {
+  background: transparent;
+  text-shadow: -1px -1px 3px #000; }
+  .active:hover {
+    background: rgba(0, 0, 0, 0.5); }
+
+@include: url('../fonts/fonts-all.css');
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-size: 16px; }
+
+body {
+  font-family: "Gotham Light Regular", sans-serif;
+  font-size: 17px;
+  line-height: 25px;
+  color: #fff; }
+
+.fl-l {
+  float: left;
+  padding-right: 15px; }
+
+.color-b {
+  color: #000; }
+
+.margin-def_1 {
+  margin-top: -20px; }
+.margin-def_2 {
+  top: 10px; }
+
+.sup_big {
+  font-size: 25px;
+  margin-left: 5px; }
+.sup_small {
+  font-size: 15px;
+  margin-left: 2px; }
+
+.fuel {
+  font-style: normal;
+  padding-right: 35px; }
+
+@include: url('../fonts/fonts-all.css');
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-size: 16px; }
+
+body {
+  font-family: "Gotham Light Regular", sans-serif;
+  font-size: 17px;
+  line-height: 25px;
+  color: #fff; }
+
+.fl-l {
+  float: left;
+  padding-right: 15px; }
+
+.color-b {
+  color: #000; }
+
+.margin-def_1 {
+  margin-top: -20px; }
+.margin-def_2 {
+  top: 10px; }
+
+.sup_big {
+  font-size: 25px;
+  margin-left: 5px; }
+.sup_small {
+  font-size: 15px;
+  margin-left: 2px; }
+
+.fuel {
+  font-style: normal;
+  padding-right: 35px; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+img {
+  max-width: 100%; }
+
+.grid__wrapper::after, .img-tabs::after, .box::after, .grid__wrapper::before, .img-tabs::before, .box::before {
+  content: " ";
+  display: table;
+  clear: both; }
+
+html {
+  height: 100%;
+  font: 16px/1.1 "Open Sans", Helvetica, sans-serif;
+  color: #000; }
+
+.w-1 {
+  width: 272px; }
+
+.h-1 {
+  max-height: 272px;
+  height: 272px; }
+
+.w-2 {
+  width: 544px; }
+
+.h-2 {
+  max-height: 554px;
+  height: 554px; }
+
+.w-3 {
+  width: 826px; }
+
+.h-3 {
+  max-height: 826px;
+  height: 826px; }
+
+.grid {
+  max-width: 75rem;
+  min-width: 20rem;
+  width: 100%;
+  margin: 1em auto; }
+  .grid__wrapper {
+    width: 1118px;
+    margin: auto; }
+  .grid__column {
+    float: left;
+    background: #f3f3f3; }
+    .grid__column_main {
+      width: 836px; }
+    .grid__column_sidebar {
+      width: 272px; }
+  .grid__col {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    float: left;
+    cursor: pointer; }
+    .grid__col:hover {
+      -webkit-filter: saturate(2);
+      filter: saturate(2); }
+
+[class*='h-'] {
+  overflow: hidden; }
+
+.grid__column_main .grid__col:nth-child(1) {
+  background: url("../i/ct-insp-2015-spring-winter-tires-tab-1-img-1.jpg"); }
+.grid__column_main .grid__col:nth-child(2) {
+  background: url("../i/ct-insp-2015-spring-winter-tires-tab-1-img-9.jpg"); }
+.grid__column_main .grid__col:nth-child(3) {
+  background: url("../i/ct-insp-2015-spring-winter-tires-tab-3-img-3.jpg"); }
+.grid__column_main .grid__col:nth-child(4) {
+  background: url("../i/ct-insp-2015-spring-winter-tires-tab-3-img-4.jpg"); }
+.grid__column_main .grid__col:nth-child(5) {
+  background: url("../i/ct-insp-2015-spring-winter-tires-tab-3-img-5.jpg"); }
+.grid__column_main .grid__col:nth-child(6) {
+  background: url("../i/ct-insp-2015-spring-winter-tires-tab-1-img-9.jpg"); }
+
+.grid__column_sidebar .grid__col:nth-child(1) {
+  background: url("../i/ct-insp-2015-spring-winter-tires-tab-3-video-1.jpg"); }
+.grid__column_sidebar .grid__col:nth-child(2) {
+  background: #6db0da; }
+.grid__column_sidebar .grid__col:nth-child(3) {
+  background: url("../i/ct-insp-2015-spring-winter-tires-tab-3-video-3.jpg"); }
+.grid__column_sidebar .grid__col:nth-child(4) {
+  background: url("../i/ct-insp-2015-spring-winter-tires-tab-3-video-4.jpg"); }
+.grid__column_sidebar .grid__col:nth-child(5) {
+  background: url("../i/ct-insp-2015-spring-winter-tires-tab-3-video-5.jpg"); }
+.grid__column_sidebar .grid__col:nth-child(6) {
+  background: #6db0da; }
+
+[class*="box__heading"] {
+  text-transform: uppercase;
+  margin-bottom: 5px; }
+
+.box {
+  padding: 35px 25px 0 25px;
+  position: relative; }
+  .box__check-tire {
+    padding-top: 30px; }
+  .box_video {
+    padding: 0 15px 30px; }
+  .box_all-terrain {
+    padding-right: 0; }
+  .box__heading_1 {
+    font: normal 50px/40px "Gotham Medium Condensed", sans-serif;
+    color: #fff; }
+  .box__heading_2 {
+    font: normal 46px/40px "Gotham Medium Condensed", sans-serif;
+    color: #fff; }
+  .box__heading_3 {
+    font: normal 25px/25px "Gotham Medium Condensed", sans-serif;
+    color: #fff;
+    margin-bottom: 30px;
+    margin-top: 220px;
+    text-align: center; }
+  .box__heading_4 {
+    font: normal 20px/25px "Gotham Bold", sans-serif;
+    color: #00aeef;
+    text-transform: initial; }
+  .box__link {
+    display: inline-block;
+    text-transform: uppercase;
+    font: normal 16px/25px "Gotham Bold", sans-serif;
+    color: #000; }
+    .box__link:hover {
+      color: #6db0da; }
+    .box__link_w {
+      color: #fff; }
+      .box__link_w:hover {
+        color: #fff;
+        box-shadow: 0 1px 0 0 #fff, 0 -1px 0 0 #fff; }
+    .box__link::after {
+      content: "›";
+      margin: 0 5px;
+      font-size: 20px; }
+  .box__caption {
+    font: 300 17px/normalpx "Gotham Light Regular", sans-serif;
+    color: #fff;
+    margin-bottom: 10px; }
+
+@include: url('../fonts/fonts-all.css');
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-size: 16px; }
+
+body {
+  font-family: "Gotham Light Regular", sans-serif;
+  font-size: 17px;
+  line-height: 25px;
+  color: #fff; }
+
+.fl-l {
+  float: left;
+  padding-right: 15px; }
+
+.color-b {
+  color: #000; }
+
+.margin-def_1 {
+  margin-top: -20px; }
+.margin-def_2 {
+  top: 10px; }
+
+.sup_big {
+  font-size: 25px;
+  margin-left: 5px; }
+.sup_small {
+  font-size: 15px;
+  margin-left: 2px; }
+
+.fuel {
+  font-style: normal;
+  padding-right: 35px; }
+
+@include: url('../fonts/fonts-all.css');
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-size: 16px; }
+
+body {
+  font-family: "Gotham Light Regular", sans-serif;
+  font-size: 17px;
+  line-height: 25px;
+  color: #fff; }
+
+.fl-l {
+  float: left;
+  padding-right: 15px; }
+
+.color-b {
+  color: #000; }
+
+.margin-def_1 {
+  margin-top: -20px; }
+.margin-def_2 {
+  top: 10px; }
+
+.sup_big {
+  font-size: 25px;
+  margin-left: 5px; }
+.sup_small {
+  font-size: 15px;
+  margin-left: 2px; }
+
+.fuel {
+  font-style: normal;
+  padding-right: 35px; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+img {
+  max-width: 100%; }
+
+.grid__wrapper::after, .img-tabs::after, .box::after, .grid__wrapper::before, .img-tabs::before, .box::before {
+  content: " ";
+  display: table;
+  clear: both; }
+
+html {
+  height: 100%;
+  font: 16px/1.1 "Open Sans", Helvetica, sans-serif;
+  color: #000; }
+
+.w-1 {
+  width: 272px; }
+
+.h-1 {
+  max-height: 272px;
+  height: 272px; }
+
+.w-2 {
+  width: 544px; }
+
+.h-2 {
+  max-height: 554px;
+  height: 554px; }
+
+.w-3 {
+  width: 826px; }
+
+.h-3 {
+  max-height: 826px;
+  height: 826px; }
+
+.grid {
+  max-width: 75rem;
+  min-width: 20rem;
+  width: 100%;
+  margin: 1em auto; }
+  .grid__wrapper {
+    width: 1118px;
+    margin: auto; }
+  .grid__column {
+    float: left;
+    background: #f3f3f3; }
+    .grid__column_main {
+      width: 836px; }
+    .grid__column_sidebar {
+      width: 272px; }
+  .grid__col {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    float: left;
+    cursor: pointer; }
+    .grid__col:hover {
+      -webkit-filter: saturate(2);
+      filter: saturate(2); }
+
+[class*='h-'] {
+  overflow: hidden; }
+
+.measuring {
+  display: inline-block;
+  position: relative; }
+  .measuring-scale {
+    width: 100px;
+    height: 22px;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    margin: 0 5px;
+    border: 1px solid #000;
+    background: repeating-linear-gradient(90deg, #000, #000 1px, transparent 1px, transparent 1em);
+    background-color: #fff; }
+    .measuring-scale_percent {
+      position: absolute;
+      top: 20px;
+      left: 115px;
+      font-family: "Gotham Medium";
+      font-style: normal;
+      margin-top: -20px;
+      padding-bottom: 20px; }
+    .measuring-scale_bg {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      display: inline-block;
+      height: 20px;
+      width: 100px;
+      background: repeating-linear-gradient(90deg, #000, #000 1px, transparent 1px, transparent 1em);
+      background-color: #6bb0dc; }
+      .measuring-scale_bg:hover {
+        background-color: #d52229; }
+  .measuring:hover {
+    color: #6bb0dc; }
+
+.pct-dry_cooper {
+  width: 97.4%; }
+.pct-dry_motoMaster {
+  width: 94.5%; }
+.pct-dry_goodyear {
+  width: 97.6%; }
+
+.pct-wet_cooper {
+  width: 100%; }
+.pct-wet_motoMaster {
+  width: 91%; }
+.pct-wet_goodyear {
+  width: 91.7%; }
+
+.pct-ice_cooper {
+  width: 97.1%; }
+.pct-ice_motoMaster {
+  width: 71.8%; }
+.pct-ice_goodyear {
+  width: 92.2%; }
+
+.pct-snow_cooper {
+  width: 99.7%; }
+.pct-snow_motoMaster {
+  width: 100%; }
+.pct-snow_goodyear {
+  width: 86.5%; }
+
+.pct-fuel_cooper {
+  width: 100%; }
+.pct-fuel_motoMaster {
+  width: 89.4%; }
+.pct-fuel_goodyear {
+  width: 89.9%; }
+
+.pct-comfort_cooper {
+  width: 100%; }
+.pct-comfort_motoMaster {
+  width: 92.6%; }
+.pct-comfort_goodyear {
+  width: 82.2%; }
+
+@include: url('../fonts/fonts-all.css');
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-size: 16px; }
+
+body {
+  font-family: "Gotham Light Regular", sans-serif;
+  font-size: 17px;
+  line-height: 25px;
+  color: #fff; }
+
+.fl-l {
+  float: left;
+  padding-right: 15px; }
+
+.color-b {
+  color: #000; }
+
+.margin-def_1 {
+  margin-top: -20px; }
+.margin-def_2 {
+  top: 10px; }
+
+.sup_big {
+  font-size: 25px;
+  margin-left: 5px; }
+.sup_small {
+  font-size: 15px;
+  margin-left: 2px; }
+
+.fuel {
+  font-style: normal;
+  padding-right: 35px; }
+
+@include: url('../fonts/fonts-all.css');
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-size: 16px; }
+
+body {
+  font-family: "Gotham Light Regular", sans-serif;
+  font-size: 17px;
+  line-height: 25px;
+  color: #fff; }
+
+.fl-l {
+  float: left;
+  padding-right: 15px; }
+
+.color-b {
+  color: #000; }
+
+.margin-def_1 {
+  margin-top: -20px; }
+.margin-def_2 {
+  top: 10px; }
+
+.sup_big {
+  font-size: 25px;
+  margin-left: 5px; }
+.sup_small {
+  font-size: 15px;
+  margin-left: 2px; }
+
+.fuel {
+  font-style: normal;
+  padding-right: 35px; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+img {
+  max-width: 100%; }
+
+.grid__wrapper::after, .img-tabs::after, .box::after, .grid__wrapper::before, .img-tabs::before, .box::before {
+  content: " ";
+  display: table;
+  clear: both; }
+
+html {
+  height: 100%;
+  font: 16px/1.1 "Open Sans", Helvetica, sans-serif;
+  color: #000; }
+
+.w-1 {
+  width: 272px; }
+
+.h-1 {
+  max-height: 272px;
+  height: 272px; }
+
+.w-2 {
+  width: 544px; }
+
+.h-2 {
+  max-height: 554px;
+  height: 554px; }
+
+.w-3 {
+  width: 826px; }
+
+.h-3 {
+  max-height: 826px;
+  height: 826px; }
+
+.grid {
+  max-width: 75rem;
+  min-width: 20rem;
+  width: 100%;
+  margin: 1em auto; }
+  .grid__wrapper {
+    width: 1118px;
+    margin: auto; }
+  .grid__column {
+    float: left;
+    background: #f3f3f3; }
+    .grid__column_main {
+      width: 836px; }
+    .grid__column_sidebar {
+      width: 272px; }
+  .grid__col {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    float: left;
+    cursor: pointer; }
+    .grid__col:hover {
+      -webkit-filter: saturate(2);
+      filter: saturate(2); }
+
+[class*='h-'] {
+  overflow: hidden; }
+
+.icon-block .icon {
+  display: inline-block;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font: normal 25px/30px "Gotham Bold", sans-serif;
+  color: #000; }
+  .icon-block .icon_big::before {
+    content: " ";
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+    width: 36px;
+    height: 36px;
+    border-radius: 100%;
+    background: #fff url("../i/ct-insp-2015-spring-winter-tires-icons-sprite_big.png") no-repeat 0 0; }
+  .icon-block .icon_big:nth-of-type(1)::before {
+    background: #fff url("../i/ct-insp-2015-spring-winter-tires-icons-sprite_big.png") no-repeat 0 0; }
+  .icon-block .icon_big:nth-of-type(3)::before {
+    background: #fff url("../i/ct-insp-2015-spring-winter-tires-icons-sprite_big.png") no-repeat 0 -39px; }
+  .icon-block .icon_big:nth-of-type(5)::before {
+    background: #fff url("../i/ct-insp-2015-spring-winter-tires-icons-sprite_big.png") no-repeat 0 -75px; }
+  .icon-block .icon_big:nth-of-type(2)::before {
+    background: #fff url("../i/ct-insp-2015-spring-winter-tires-icons-sprite_big.png") no-repeat 0 -111px; }
+  .icon-block .icon_big:nth-of-type(4)::before {
+    background: #fff url("../i/ct-insp-2015-spring-winter-tires-icons-sprite_big.png") no-repeat 0 -147px; }
+  .icon-block .icon_big:nth-of-type(6)::before {
+    background: #fff url("../i/ct-insp-2015-spring-winter-tires-icons-sprite_big.png") no-repeat 0 -183px; }
+  .icon-block .icon_l {
+    width: 130px; }
+  .icon-block .icon_r {
+    width: 300px; }
+  .icon-block .icon_small {
+    font: normal 17px/20px "Gotham Bold", sans-serif;
+    color: #fff;
+    width: 140px;
+    text-align: right;
+    margin-bottom: 10px; }
+    .icon-block .icon_small::after {
+      content: " ";
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 10px;
+      width: 28px;
+      height: 28px;
+      border-radius: 100%;
+      background: #fff url("../i/ct-insp-2015-spring-winter-tires-icons-sprite_small.png") no-repeat 0 0; }
+    .icon-block .icon_small:nth-of-type(1)::after {
+      background: #fff url("../i/ct-insp-2015-spring-winter-tires-icons-sprite_small.png") no-repeat 0 0; }
+    .icon-block .icon_small:nth-of-type(2)::after {
+      background: #fff url("../i/ct-insp-2015-spring-winter-tires-icons-sprite_small.png") no-repeat 0 -28px; }
+    .icon-block .icon_small:nth-of-type(3)::after {
+      background: #fff url("../i/ct-insp-2015-spring-winter-tires-icons-sprite_small.png") no-repeat 0 -56px; }
+    .icon-block .icon_small:nth-of-type(4)::after {
+      background: #fff url("../i/ct-insp-2015-spring-winter-tires-icons-sprite_small.png") no-repeat 0 -84px; }
+    .icon-block .icon_small:nth-of-type(5)::after {
+      background: #fff url("../i/ct-insp-2015-spring-winter-tires-icons-sprite_small.png") no-repeat 0 -112px;
+      margin-top: -25px; }
+    .icon-block .icon_small:nth-of-type(6)::after {
+      background: #fff url("../i/ct-insp-2015-spring-winter-tires-icons-sprite_small.png") no-repeat 0 -140px; }
+
+@include: url('../fonts/fonts-all.css');
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-size: 16px; }
+
+body {
+  font-family: "Gotham Light Regular", sans-serif;
+  font-size: 17px;
+  line-height: 25px;
+  color: #fff; }
+
+.fl-l {
+  float: left;
+  padding-right: 15px; }
+
+.color-b {
+  color: #000; }
+
+.margin-def_1 {
+  margin-top: -20px; }
+.margin-def_2 {
+  top: 10px; }
+
+.sup_big {
+  font-size: 25px;
+  margin-left: 5px; }
+.sup_small {
+  font-size: 15px;
+  margin-left: 2px; }
+
+.fuel {
+  font-style: normal;
+  padding-right: 35px; }
+
+@include: url('../fonts/fonts-all.css');
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-size: 16px; }
+
+body {
+  font-family: "Gotham Light Regular", sans-serif;
+  font-size: 17px;
+  line-height: 25px;
+  color: #fff; }
+
+.fl-l {
+  float: left;
+  padding-right: 15px; }
+
+.color-b {
+  color: #000; }
+
+.margin-def_1 {
+  margin-top: -20px; }
+.margin-def_2 {
+  top: 10px; }
+
+.sup_big {
+  font-size: 25px;
+  margin-left: 5px; }
+.sup_small {
+  font-size: 15px;
+  margin-left: 2px; }
+
+.fuel {
+  font-style: normal;
+  padding-right: 35px; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+img {
+  max-width: 100%; }
+
+.grid__wrapper::after, .img-tabs::after, .box::after, .grid__wrapper::before, .img-tabs::before, .box::before {
+  content: " ";
+  display: table;
+  clear: both; }
+
+html {
+  height: 100%;
+  font: 16px/1.1 "Open Sans", Helvetica, sans-serif;
+  color: #000; }
+
+.w-1 {
+  width: 272px; }
+
+.h-1 {
+  max-height: 272px;
+  height: 272px; }
+
+.w-2 {
+  width: 544px; }
+
+.h-2 {
+  max-height: 554px;
+  height: 554px; }
+
+.w-3 {
+  width: 826px; }
+
+.h-3 {
+  max-height: 826px;
+  height: 826px; }
+
+.grid {
+  max-width: 75rem;
+  min-width: 20rem;
+  width: 100%;
+  margin: 1em auto; }
+  .grid__wrapper {
+    width: 1118px;
+    margin: auto; }
+  .grid__column {
+    float: left;
+    background: #f3f3f3; }
+    .grid__column_main {
+      width: 836px; }
+    .grid__column_sidebar {
+      width: 272px; }
+  .grid__col {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    float: left;
+    cursor: pointer; }
+    .grid__col:hover {
+      -webkit-filter: saturate(2);
+      filter: saturate(2); }
+
+[class*='h-'] {
+  overflow: hidden; }
+
+.table {
+  float: right;
+  width: 374px;
+  height: 228px;
+  margin-left: 10px;
+  border-collapse: collapse;
+  text-transform: uppercase;
+  font: normal 16px/20px "Gotham Light Condensed", sans-serif;
+  color: #fff; }
+  .table-head {
+    background: #231f20; }
+  .table-body > .table__row:nth-of-type(1) {
+    background: #1c9553; }
+    .table-body > .table__row:nth-of-type(1):hover {
+      background: #10552f; }
+  .table-body > .table__row:nth-of-type(2) {
+    background: #cdae18; }
+    .table-body > .table__row:nth-of-type(2):hover {
+      background: #897410; }
+  .table-body > .table__row:nth-child(3) {
+    background: #d67e19; }
+    .table-body > .table__row:nth-child(3):hover {
+      background: #925611; }
+  .table-body > .table__row:nth-child(4) {
+    background: #d52229; }
+    .table-body > .table__row:nth-child(4):hover {
+      background: #93171c; }
+  .table td, .table th {
+    padding: 5px;
+    padding-left: 10px;
+    border: 2px solid #fff; }
+
+@include: url('../fonts/fonts-all.css');
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-size: 16px; }
+
+body {
+  font-family: "Gotham Light Regular", sans-serif;
+  font-size: 17px;
+  line-height: 25px;
+  color: #fff; }
+
+.fl-l {
+  float: left;
+  padding-right: 15px; }
+
+.color-b {
+  color: #000; }
+
+.margin-def_1 {
+  margin-top: -20px; }
+.margin-def_2 {
+  top: 10px; }
+
+.sup_big {
+  font-size: 25px;
+  margin-left: 5px; }
+.sup_small {
+  font-size: 15px;
+  margin-left: 2px; }
+
+.fuel {
+  font-style: normal;
+  padding-right: 35px; }
+
+@include: url('../fonts/fonts-all.css');
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-size: 16px; }
+
+body {
+  font-family: "Gotham Light Regular", sans-serif;
+  font-size: 17px;
+  line-height: 25px;
+  color: #fff; }
+
+.fl-l {
+  float: left;
+  padding-right: 15px; }
+
+.color-b {
+  color: #000; }
+
+.margin-def_1 {
+  margin-top: -20px; }
+.margin-def_2 {
+  top: 10px; }
+
+.sup_big {
+  font-size: 25px;
+  margin-left: 5px; }
+.sup_small {
+  font-size: 15px;
+  margin-left: 2px; }
+
+.fuel {
+  font-style: normal;
+  padding-right: 35px; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+img {
+  max-width: 100%; }
+
+.grid__wrapper::after, .img-tabs::after, .box::after, .grid__wrapper::before, .img-tabs::before, .box::before {
+  content: " ";
+  display: table;
+  clear: both; }
+
+html {
+  height: 100%;
+  font: 16px/1.1 "Open Sans", Helvetica, sans-serif;
+  color: #000; }
+
+.w-1 {
+  width: 272px; }
+
+.h-1 {
+  max-height: 272px;
+  height: 272px; }
+
+.w-2 {
+  width: 544px; }
+
+.h-2 {
+  max-height: 554px;
+  height: 554px; }
+
+.w-3 {
+  width: 826px; }
+
+.h-3 {
+  max-height: 826px;
+  height: 826px; }
+
+.grid {
+  max-width: 75rem;
+  min-width: 20rem;
+  width: 100%;
+  margin: 1em auto; }
+  .grid__wrapper {
+    width: 1118px;
+    margin: auto; }
+  .grid__column {
+    float: left;
+    background: #f3f3f3; }
+    .grid__column_main {
+      width: 836px; }
+    .grid__column_sidebar {
+      width: 272px; }
+  .grid__col {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    float: left;
+    cursor: pointer; }
+    .grid__col:hover {
+      -webkit-filter: saturate(2);
+      filter: saturate(2); }
+
+[class*='h-'] {
+  overflow: hidden; }
+
+.play-button {
+  display: block;
+  width: 62px;
+  height: 62px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -40px -31px;
+  border-radius: 50%;
+  background: #dd2a12;
+  text-align: center;
+  line-height: 62px;
+  transition-duration: 300ms; }
+  .play-button:hover {
+    background: transparent;
+    box-shadow: 0px 0px 15px -2px #fff; }
+  .play-button__icon {
+    font-style: normal; }
+    .play-button__icon::before {
+      content: "▶";
+      color: #fff;
+      font-size: 50px; }
+
+/*# sourceMappingURL=INDEX.css.map */

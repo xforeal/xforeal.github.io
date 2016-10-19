@@ -1,0 +1,59 @@
+@import "fonts"
+@import "grid"
+@import "const"
+
+//HEADER  
+.header
+  background: rgba($black, 0.9) 
+
+.header-title
+  +font(normal, 27, 38, $GM, $white)
+
+  padding: 30px 0
+  text-align: center
+.img-tabs
+  display: inline-block
+  position: relative
+  overflow: hidden
+  @extend %clearfix
+  &__wrap
+    width: 1020px
+    height: 215px
+    margin: 0 auto
+  &__bg
+    border: 9px solid #eaeaea
+    border-radius: 5px
+  &__overlay
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 210px
+    padding: 60px 25px
+    background: rgba($black, 0.5)
+    +font(600, 30, 35, $GBN, $white)
+    text-transform: uppercase
+    &:hover
+      background: rgba($black, 0)
+      text-shadow: -1px -1px 3px $black
+  &__title
+    &_icon-1:before,  &_icon-2:before, &_icon-3:before
+      content: " "
+      display: block
+      float: left
+      margin-right: 10px
+      width: 80px
+      height: 80px
+      border: 3px solid #fff
+      border-radius: 100%
+      background: rgba(0,0,0,0.5) url('../i/header-icon1-car.png') no-repeat 50% 50%
+    &_icon-2:before
+      background: rgba(0,0,0,0.5) url('../i/header-icon2-car.png') no-repeat 50% 50%
+    &_icon-3:before
+      background: rgba(0,0,0,0.5) url('../i/header-icon3-car.png') no-repeat 50% 50%
+     
+.active
+  background: rgba($black, 0)
+  text-shadow: -1px -1px 3px $black
+  &:hover
+    background: rgba($black, 0.5)

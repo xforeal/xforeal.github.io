@@ -1,0 +1,72 @@
+@import "foundation";
+
+.no-bg {
+  background: transparent !important;
+}
+
+.custom-pb {
+  padding-bottom: 10px !important;
+}
+
+.tiny-text {
+  font-size: 12px;
+  margin: 0 !important;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.basic-link {
+  text-decoration: underline;
+  color: #000;
+}
+
+.sub-heading {
+  color: $grey;
+  text-transform: uppercase;
+  margin: 0;
+  font-size: 1.25em; //20/16;
+}
+
+.heading-1 {
+  text-transform: uppercase;
+  margin: 0;
+  font-size: 1.375em; //22px;
+}
+
+.main-body-p {
+  color: $grey;
+  line-height: (22/14);
+}
+
+.hr {
+  background: $grey;
+  height: 2px;
+  margin: 0 !important;
+}
+
+.prod {
+  text-transform: uppercase;
+  color: $pink;
+}
+
+.prod-img {
+  min-height: 115px;
+}
+
+.price {
+  color: $grey;
+}
+
+table.button {
+  margin-bottom: 0;
+  table {
+    td {
+      padding: map-get($button-padding, default);
+      a {
+        padding: 0px;
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+.fl-l {
+  float: left;
+  padding-right: 15px; }
+
+.color-b {
+  color: #000; }
+
+.margin-def_1 {
+  margin-top: -20px; }
+.margin-def_2 {
+  top: 10px; }
+
+.sup_big {
+  font-size: 25px;
+  margin-left: 5px; }
+.sup_small {
+  font-size: 15px;
+  margin-left: 2px; }
+
+.fuel {
+  font-style: normal;
+  padding-right: 35px; }
+
+/*# sourceMappingURL=const.css.map */

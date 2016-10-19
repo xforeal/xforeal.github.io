@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>xfr.blog-main</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="shortcut icon" href="favicon.ico">
+  <script src="js/jquery.min.js"></script>
+   
+    <!-- HTML5 Shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+<div class="page-wrap">
+  <header>
+  <span class="nav-toggler">menu</span>
+
+   <ul class="nav-menu">
+    <li><a href="pages/new.html">NEW</a>
+      <ul class="sub-menu">
+        <li><a href="pages/template.html">add posts</a></li>
+        <li><a href="#">this day</a></li>
+        <li><a href="#">last week</a></li>
+        <li><a href="#">last month</a></li>
+      </ul>
+    </li>
+    <li><a href="pages/category.html">CATEGORIES</a>
+      <ul class="sub-menu">
+        <li><a href="#">all</a></li>
+        <li><a href="#">CSS</a></li>
+        <li><a href="#">HTML</a></li>
+        <li><a href="#">JS</a></li>
+      </ul>
+    </li>
+    <li class="logo"><a href="#" title="go to main"><i>MAIN</i></a></li>
+    <li><a href="pages/bloggers.html">BLOGGERS</a></li>
+    <li><a href="#">SEARCH</a></li>
+  </ul>
+  <script>
+  $(document).ready( function(){
+    $('.nav-toggler').click(function(){
+      $('.nav-menu').slideToggle(400, function(){
+        $(this).toggleClass("nav-expanded").css('display', '');
+      });
+    });
+  });
+   
+  </script>
+  </header>
+  <!-- HERO -->
+  <section id="hero">
+    <div class="wrap">
+     <a class="hero" href="#">
+    <div class="bgCover"></div>
+    <!-- <div class="gradient"></div> -->
+    <div class="caption">
+    <h1 class="title">post title</h1>
+    <p>Featured Post</p>
+    </div>
+    </a>
+    </div>
+  </section>
+  
+  <main class="gallery">
+      <div class="wrap">
+        <hr>
+        <h2 class="subtitle">recent posts</h2>
+      </div>
+      <div class="wrap">
+        <div class="col-4-12">
+          
+           <article>
+            <div class="cover"><a href="pages/pg1.html"><img src="img/artp1.jpg" alt=""></a></div>
+            <div class="content">
+             <span class="author-post">
+                <a href="pages/pg1.html"><b>Vanessa Dutton </b>on <i class="date">jul 01, 2016</i></a>
+            </span>
+            <h3><a href="pages/pg1.html">CSS Keyframe Animation with Delay Between Iterations</a></h3>
+            <p><a href="pages/pg1.html">Say you want an animation to run for 1 second, but then delay for 4 seconds before running again. Seems like that would be easy. Turns out it's not-so-straightforward, but doable. You need to fake it.</a></p>
+              </div>
+              <em><a href="pages/pg1.html">Read more</a></em>
+          </article>
+       
+          <article>
+            <div class="cover"><a href="pages/pg2.html"><img src="img/artp2.jpg" alt=""></a></div>
+            <div class="content">
+             <span class="author-post">
+                <a href="pages/pg2.html"><b>Brendan Martinez </b>on <i class="date">jul 01, 2016</i></a>
+            </span>
+            <h3><a href="pages/pg2.html">CSS Keyframe Animation with Delay Between Iterations</a></h3>
+            <p><a href="pages/pg2.html">Say you want an animation to run for 1 second, but then delay for 4 seconds before running again. Seems like that would be easy. Turns out it's not-so-straightforward, but doable. You need to fake it.</a></p>
+              
+              </div>
+              <em><a href="pages/pg2.html">Read more</a></em>
+          </article>
+        
+         <article>
+            <div class="cover"><a href="pages/pg3.html"><img src="img/artp3.jpg" alt=""></a></div>
+            <div class="content">
+            <span class="author-post">
+                <a href="pages/pg3.html"><b>Rosemary Dodson </b>on <i class="date">jul 01, 2016</i></a>
+            </span>
+            <h3><a href="pages/pg3.html">Considerations for Styling a Modal</a></h3>
+            <p><a href="pages/pg3.html">A modal. A small box that pops up to tell you something important. How hard can it be? Wellllll. Medium hard, I'd say. There's quite a few considerations and a few tricky things to get just right. Let us count the ways.</a></p>
+              </div>
+              <em><a href="pages/pg3.html">Read more</a></em>
+          </article>
+          
+        </div>
+        
+        <div class="col-4-12">
+          <article>
+            <div class="cover"><a href="pages/pg4.html"><img src="img/artp4.jpg" alt=""></a></div>
+            <div class="content">
+            <span class="author-post">
+               <a href="pages/pg4.html"><b>Brian Fane </b>on <i class="date">jul 01, 2016</i></a>
+            </span>
+            <h3><a href="pages/pg4.html">Change Color of All Four Borders Even With &#147;border-collapse: collapse;&#148;</a></h3>
+            <p><a href="pages/pg4.html">The following is a guest post by Daniel Jauch. It's a quicky that covers something I bet many of us have run across at one time or another: border-collapse is great, until it impedes on your ability to change a border color you're trying to change because of the overlapping.</a></p>
+              </div>
+              <em><a href="pages/pg4.html">Read more</a></em>
+          </article>
+        
+          <article>
+            <div class="cover"><a href="pages/pg5.html"><img src="img/artp5.jpg" alt=""></a></div>
+            <div class="content">
+            <span class="author-post">
+                <a href="pages/pg5.html"><b>Michael Calhoun </b>on <i class="date">jul 03, 2016</i></a>
+            </span>
+            <h3><a href="pages/pg5.html">The Moment CSS Started Making “Sense”</a></h3>
+            <p><a href="pages/pg5.html">It was way back in 2008 that Chris shared his "Ah-ha!" moment when working with CSS. You know, that metaphorical lightbulb that ignites when you go from not knowing what the heck CSS is to suddenly having a baseline for understanding how it works.</a></p>
+              </div>
+              <em><a href="pages/pg5.html">Read more</a></em>
+          </article>
+    
+          <article>
+            <div class="cover"><a href="pages/pg6.html"><img src="img/artp6.jpg" alt=""></a></div>
+            <div class="content">
+              <span class="author-post">
+                  <a href="pages/pg6.html"><b>Daniel Da Silva </b>on <i class="date">jul 04, 2016</i></a>
+              </span>
+              <h3><a href="pages/pg6.html">How I Ended Up With Element Queries, And How You Can Use Them Today </a></h3>
+              <p><a href="pages/pg6.html">We often want a component to respond to the dimensions of its parent element rather than the dimensions of the browser window. Currently that’s not possible but ultimately that’s the idea behind Element Queries, and over on Smashing Magazine Tommy Hodgins has written about the development of EQCSS.js, a JavaScript library which allows developers to write element queries.</a></p>
+            </div>
+            <em><a href="pages/pg6.html">Read more</a></em>
+          </article>
+        </div>
+        
+      <div class="col-4-12">
+        <article>
+          <div class="cover"><a href="pages/pg7.html"><img src="img/artp7.jpg" alt=""></a></div>
+          <div class="content">
+            <span class="author-post">
+               <a href="pages/pg7.html"><b>Michael Calhoun </b>on <i class="date">jul 10, 2016</i></a>
+            </span>
+            <h3><a href="pages/pg7.html">Collaborative Engineering <br>and Design Tools</a></h3>
+            <p><a href="pages/pg7.html">Working at any large company, the greatest hurdle is always the problem of scale. Be it engineering, design, or how they work together, communication is the key to a successful business. Here are some of the tools that I've seen help a great deal while collaborating on a large team. With a number of engineers and designers in the mix — not to mention hybrids like me — working together seamlessly and staying focused on a common goal for a long period of time can be challenging. Here are a number of tools I've seen firsthand to ensure tight and seamless collaboration and communication.</a></p>
+            </div>
+            <em><a href="pages/pg4.html">Read more</a></em>
+        </article>
+        
+        <article>
+          <div class="cover"><a href="pages/pg1.html"><img src="img/artp8.jpg" alt=""></a></div>
+          <div class="content">
+            <span class="author-post">
+               <a href="pages/pg1.html"><b>Vanessa Frank </b>on <i class="date">jul 15, 2016</i></a>
+            </span>
+            <h3><a href="pages/pg1.html">Optimizing Critical-Path Performance With Express Server And Handlebars</a></h3>
+            <p><a href="pages/pg1.html">Recently, I’ve been working on an isomorphic React website. This website was developed using React, running on an Express server. Everything was going well, but I still wasn’t satisfied with a load-blocking CSS bundle. So, I started to think about options for how to implement the critical-path technique on an Express server.</a></p>
+            </div>
+            <em><a href="pages/pg1.html">Read more</a></em>
+        </article>
+      
+       <article>
+          <div class="cover"><a href="pages/pg5.html"><img src="img/artp9.jpg" alt=""></a></div>
+          <div class="content">
+            <span class="author-post">
+               <a href="pages/pg5.html"><b>Daniel Da Silva </b>on <i class="date">jul 15, 2016</i></a>
+            </span>
+            <h3><a href="pages/pg5.html">Battling BEM (Extended Edition): <br>10 Common Problems And <br>How To Avoid Them</a></h3>
+            <p><a href="pages/pg5.html">Whether you’ve just discovered BEM or are an old hand (in web terms anyway!), you probably appreciate what a useful methodology it is. If you don’t know what BEM is, I suggest you read about it on the BEM website before continuing with this post, because I’ll be using terms that assume a basic understanding of this CSS methodology.</a></p>
+            </div>
+            <em><a href="pages/pg5.html">Read more</a></em>
+        </article>
+      </div><!-- /col-4-12 -->
+        
+    </div><!-- /row -->
+  </main>
+  <!-- PAGINATION -->
+  <section id="paginator">
+      <ul class="pagination">
+        <li><a href="#">start</a></li>
+        <li><a href="#">perv</a></li>
+        <li><a href="#">01</a></li>
+        <li><a href="pages/main2.html">next</a></li>
+        <li><a href="pages/main4.html">last</a></li>
+      </ul>
+  </section><!-- /pagination -->
+
+</div><!-- /page-wrap -->
+
+<footer>
+  <div class="wrap">
+    <hr>
+    <h2><a href="#">LET'S CONNECT</a></h2>
+    <ul class="social">
+      <li><a href="#" title="Facebook"><i>&nbsp;</i><span>Facebook</span></a></li>
+      <li><a href="#" title="Instagram"><i>&nbsp;</i><span>Instagram</span></a></li>
+      <li><a href="#" title="Twitter"><i>&nbsp;</i><span>Twitter</span></a></li>
+      <li><a href="#" title="GitHub"><i>&nbsp;</i><span>GitHub</span></a></li>
+      <li><a href="#" title="Vk"><i>&nbsp;</i><span>Vk</span></a></li>
+    </ul>
+   </div>
+</footer>
+</body>
+</html>

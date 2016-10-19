@@ -1,0 +1,83 @@
+@import "fonts"
+@import "const"
+// Reset
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+a
+  text-decoration: none
+  color: inherit
+
+img
+  max-width: 100%
+
+// Clearfix
+%clearfix
+  &::after, &::before
+    content: " "
+    display: table
+    clear: both
+
+// Font
+html
+  height: 100%
+  font: 16px/1.1 'Open Sans', Helvetica, sans-serif
+  color: $black
+
+// Grid
+$max-count-col: 3
+$gridColWidth: 272px
+$gridColHeight: 272px
+$gap: 10px
+
+@function colWidth($w)
+  $width: $gridColWidth * $w
+  @if $w == $max-count-col
+    $width: $gridColWidth * $w + $gap
+  @return $width
+ 
+@function colHeight($h)
+  $height: $gridColHeight * $h
+  @if $h > 1
+    $height: $gridColHeight * $h + $gap
+  @return $height
+ 
+@for $i from 1 through $max-count-col 
+  .w-#{$i}
+    width: colWidth($i)
+  .h-#{$i}
+    max-height: colHeight($i)
+    height: colHeight($i)
+
+.grid
+  max-width: 75rem
+  min-width: 20rem
+  width: 100%
+  margin: 1em auto
+
+  &__wrapper
+    @extend %clearfix
+    width: 1118px
+    margin: auto
+
+  &__column
+    float: left
+    background: #f3f3f3
+    &_main
+      width: 836px
+    &_sidebar
+      width: 272px
+
+  &__col
+    margin-right: $gap
+    margin-bottom: $gap
+    float: left
+    cursor: pointer
+    &:hover
+      -webkit-filter: saturate(2)
+      filter: saturate(2)
+
+[class*='h-']
+  overflow: hidden

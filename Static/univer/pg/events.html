@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>events</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- HTML5 Shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+<!-- SEO -->
+<meta name="DESCRIPTION" content="...">
+<meta name="KEYWORDS" content="...">
+<meta name="COPYRIGHT" content="...">
+<meta name="AUTHOR" content="....">
+<!-- socials net -->
+<meta property="twitter:card" content="...">
+<meta property="twitter:site" content="...">
+<meta property="twitter:creator" content="...">
+<!-- CSS -->
+<link rel="stylesheet" href="../css/components.css">
+<!-- Favicon -->
+<link rel="shortcut icon" href="../favicon.ico">
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+<!-- toggle header menu responsive -->
+</head>
+<body>
+  <div class="page-wrap">
+    <!-- HEADER NAV-MENU -->
+    <header class="header">
+      <div class="header__header-top">
+        <div class="wrap">
+          <div class="row">
+           <div class="col col-lg-4 col-md-hide">
+            <ul class="header-menu-l">
+            <!-- <li><a href="tel:0441111111" class="phone">
+            <i class="fa fa-phone"></i> 
+            (044) 111 11 11</a></li> -->
+            <li><a href="#" class="site"><i class="fa fa-envelope"></i> 
+              www.lnu.com</a></li>
+              <li><a href="../main.html" class="logo-text logo-text_esm">ЛНУ</a></li>
+            </ul>
+          </div>
+          <div class="col col-lg-8 col-md-12 text-r">
+            <ul class="nav-menu">
+              <li class="nav-menu__item">
+                <a href="../main.html#projects" class="nav-menu__link">Проекти</a>
+                <ul class="nav-menu__submenu-1">
+                  <li class="nav-menu__item item_parent">
+                    <a href="infrastructura.html" class="nav-menu__link">Інфраструктура</a>
+                    <ul class="nav-menu__submenu-2">
+                      <li class="nav-menu__item">
+                      <a href="ITinfrastructura.html#stud_mist" class="nav-menu__link">Студентське містечко</a>
+                      </li>
+                      <li class="nav-menu__item">
+                      <a href="ITinfrastructura.html#reconstruction" class="nav-menu__link">Реконструкції історичних будівель</a>
+                      </li>
+                      <li class="nav-menu__item">
+                      <a href="ITinfrastructura.html#it_infr" class="nav-menu__link">IT інфраструктура</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-menu__item item_parent">
+                    <a href="education.html" class="nav-menu__link">Освіта</a>
+                    <ul class="nav-menu__submenu-2">
+                      <li class="nav-menu__item">
+                      <a href="education.html" class="nav-menu__link">Erasmus+</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-menu__item item_parent">
+                    <a href="science.html" class="nav-menu__link">Наука</a>
+                    <ul class="nav-menu__submenu-2">
+                      <li class="nav-menu__item">
+                      <a href="science.html#park" class="nav-menu__link">Науковий парк</a>
+                      </li>
+                      <li class="nav-menu__item">
+                      <a href="science.html#incubator" class="nav-menu__link">Бізнес-інкубатор</a>
+                      </li>
+                      <li class="nav-menu__item">
+                      <a href="science.html#job" class="nav-menu__link">Наукова співпраця</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-menu__item">
+                    <a href="gallery.html" class="nav-menu__link">Галерея</a>
+                  </li>
+                  <li class="nav-menu__item">
+                    <a href="events.html" class="nav-menu__link">Події та новини</a>
+                  </li>
+                </ul> 
+              </li>
+
+              <li class="nav-menu__item">
+                <a href="infrastructura.html" class="nav-menu__link">Інфраструктура</a>
+                <ul class="nav-menu__submenu-1">
+                  <li class="nav-menu__item">
+                    <a href="ITinfrastructura.html#stud_mist" class="nav-menu__link">Студентське містечко</a>
+                  </li>
+                  <li class="nav-menu__item item_parent">
+                    <a href="infrastructura.html#reconstruction" class="nav-menu__link">Реконструкції історичних будівель</a>
+                      <ul class="nav-menu__submenu-2">
+                        <li class="nav-menu__item">
+                          <a href="infrastructura-besyadetskix.html" class="nav-menu__link">палац БЕСЯДЕЦЬКИХ</a></li>
+                        <li class="nav-menu__item">
+                          <a href="infrastructura-main_corpus.html" class="nav-menu__link">будинок головного корпусу Університету </a></li>
+                        <li class="nav-menu__item">
+                          <a href="infrastructura-grushevskogo.html" class="nav-menu__link">вул. Грушевського, 4</a></li>
+                      </ul>
+                  </li>
+                  <li class="nav-menu__item">
+                    <a href="ITinfrastructura.html#it_infr" class="nav-menu__link">IT інфраструктура</a>
+                  </li>
+                </ul>          
+              </li>
+
+              <li class="nav-menu__item">
+                <a href="science.html" class="nav-menu__link">Наука і освіта</a>
+                <ul class="nav-menu__submenu-1">
+                  <li class="nav-menu__item">
+                    <a href="science.html#park" class="nav-menu__link">Науковий парк</a></li>
+                  <li class="nav-menu__item">
+                    <a href="science.html#incubator" class="nav-menu__link">Бізнес інкубатор</a></li>
+                  <li class="nav-menu__item">
+                    <a href="science.html#job" class="nav-menu__link">Наукова співпраця</a></li>
+                  <li class="nav-menu__item">
+                    <a href="education.html" class="nav-menu__link">Erasmus+</a></li>
+                </ul>          
+              </li>
+
+              <li class="nav-menu__item">
+                <a href="partneram.html" class="nav-menu__link" class="nav-menu__link">Партнерам</a>
+                <ul class="nav-menu__submenu-1">
+                  <li class="nav-menu__item">
+                    <a href="partneram.html#supports" class="nav-menu__link">Нас підтримують</a></li>
+                  <li class="nav-menu__item">
+                    <a href="partneram.html#fond" class="nav-menu__link">Благодійний фонд</a></li>
+                  <li class="nav-menu__item">
+                    <a href="partneram.html#partners" class="nav-menu__link">Партнери</a></li>
+                </ul>          
+              </li>
+
+              <div class="toggle-nav-menu">
+                <div class="container">menu</div>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div> <!-- /header-top -->
+    <!-- HEADER-BOTTOM -->
+    <div class="header__header-bottom">
+      <div class="wrap">
+        <div class="row">
+          <a href="../main.html" class="logo">
+            <img src="../img/logo2.png" alt="">
+          </a>
+        </div>
+      </div>
+    </div> <!-- /header-bottom-->
+  </header>
+  <!-- BANNER -->
+  <section class="banner">
+   <i class="banner__gradient"></i>
+   <img class="banner__img" src="../img/science/banner_ersms1.jpg " alt="">
+   <div class="banner__content">
+     <h1 class="banner__content banner__content_heading">Події</h1>
+   </div>
+ </section>
+ <br>
+ <!-- MAIN CONTENT -->
+ <main class="main-content">
+  <div class="wrap ">
+    <aside class="col col-lg-3 col-md-6 col-sm-12">
+      <section class="row">
+        <a href="#"><img src=" ../img/news/post1.jpg"  class=" " alt=""></a>
+        <p class="post__title"><a href="#" class="post__title_link">Post Title</a></p>
+        <p class="post__smm">
+          <a href="#" class="category">Events</a>
+          <i class="fa fa-user"></i>
+          <i class="fa fa-hand-o-right"></i>
+          <i class="fa fa-comment"></i>
+        </p>
+        <p class="post__content">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic officiis reprehenderit consequatur aspernatur laboriosam eius quibusdam, atque totam tempore fugiat distinctio ipsum voluptates, provident eum!
+          <a href="#" class="read-more">...</a>
+        </p>
+      </section>
+      <section class="row">
+        <a href="#"><img src=" ../img/news/post2.jpg"  class=" " alt=""></a>
+        <p class="post__title"><a href="#" class="post__title_link">Post Title</a></p>
+        <p class="post__smm">
+          <a href="#" class="category">Events</a>
+          <i class="fa fa-user"></i>
+          <i class="fa fa-hand-o-right"></i>
+          <i class="fa fa-comment"></i>
+        </p>
+        <p class="post__content">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic officiis reprehenderit consequatur aspernatur laboriosam eius quibusdam, atque totam tempore fugiat distinctio ipsum voluptates, provident eum!
+          <a href="#" class="read-more">...</a>
+        </p>
+      </section>
+      <section class="row">
+        <a href="#"><img src=" ../img/news/post3.jpg"  class=" " alt=""></a>
+        <p class="post__title"><a href="#" class="post__title_link">Post Title</a></p>
+        <p class="post__smm">
+          <a href="#" class="category">Events</a>
+          <i class="fa fa-user"></i>
+          <i class="fa fa-hand-o-right"></i>
+          <i class="fa fa-comment"></i>
+        </p>
+        <p class="post__content">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic officiis reprehenderit consequatur aspernatur laboriosam eius quibusdam, atque totam tempore fugiat distinctio ipsum voluptates, provident eum!
+          <a href="#" class="read-more">...</a>
+        </p>
+      </section>
+    </aside>
+    <main class="col col-lg-9 col-md-6 col-sm-12">
+      <article class=" ">
+        <div class="row">
+         <div class="col col-lg-1 text-r">
+           <time class="data">
+            <ruby>SEP 2016<rt class="data__day">21</rt></ruby>
+          </time>
+        </div>
+        <div class="col col-lg-11 col-sm-12">
+         <div class="col col-lg-4 col-md-6 col-sm-12">
+           <a href="#"><img src=" ../img/news/post1.jpg"  class=" " alt=""></a>
+         </div>
+         <div class="col col-lg-8 col-md-6 col-sm-12">
+           <p class="post__title"><a href="#" class="post__title_link">Post Title</a></p>
+           <p class="post__smm">
+            <a href="#" class="category">Events</a>
+            <i class="fa fa-user"></i>
+            <i class="fa fa-hand-o-right"></i>
+            <i class="fa fa-comment"></i>
+          </p>
+          <p class="post__content">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic officiis reprehenderit consequatur aspernatur laboriosam eius quibusdam, atque totam tempore fugiat distinctio ipsum voluptates, provident eum!
+            <a href="#" class="read-more">...</a>
+          </p>
+        </div>
+      </div><!-- /col-lg-11 -->
+    </div><!-- /row -->
+  </article>
+  <article>
+    <div class="row">
+     <div class="col col-lg-1 text-r">
+       <time class="data">
+        <ruby>SEP 2016<rt class="data__day">22</rt></ruby>
+      </time>
+    </div>
+    <div class="col col-lg-11 col-sm-12">
+     <div class="col col-lg-4 col-md-6 col-sm-12">
+       <a href="#"><img src=" ../img/news/post2.jpg"  class=" " alt=""></a>
+     </div>
+     <div class="col col-lg-8 col-md-6 col-sm-12">
+       <p class="post__title"><a href="#" class="post__title_link">Post Title</a></p>
+       <p class="post__smm">
+        <a href="#" class="category">Events</a>
+        <i class="fa fa-user"></i>
+        <i class="fa fa-hand-o-right"></i>
+        <i class="fa fa-comment"></i>
+      </p>
+      <p class="post__content">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic officiis reprehenderit consequatur aspernatur laboriosam eius quibusdam, atque totam tempore fugiat distinctio ipsum voluptates, provident eum!
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic officiis reprehenderit consequatur aspernatur laboriosam eius quibusdam, atque totam tempore fugiat distinctio ipsum voluptates, provident eum!
+        <a href="#" class="read-more">...</a>
+      </p>
+    </div>
+  </div><!-- /col-lg-11 -->
+</div><!-- /row -->
+</article>
+<article>
+  <div class="row">
+   <div class="col col-lg-1 text-r">
+     <time class="data">
+      <ruby>SEP 2016<rt class="data__day">23</rt></ruby>
+    </time>
+  </div>
+  <div class="col col-lg-11 col-sm-12">
+   <div class="col col-lg-4 col-md-6 col-sm-12">
+     <a href="#"><img src=" ../img/news/post3.jpg"  class=" " alt=""></a>
+   </div>
+   <div class="col col-lg-8 col-md-6 col-sm-12">
+     <p class="post__title"><a href="#" class="post__title_link">Post Title</a></p>
+     <p class="post__smm">
+      <a href="#" class="category">Events</a>
+      <i class="fa fa-user"></i>
+      <i class="fa fa-hand-o-right"></i>
+      <i class="fa fa-comment"></i>
+    </p>
+    <p class="post__content">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic officiis reprehenderit consequatur aspernatur laboriosam eius quibusdam, atque totam tempore fugiat distinctio ipsum voluptates, provident eum!
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic officiis reprehenderit consequatur aspernatur laboriosam eius quibusdam, atque totam tempore fugiat distinctio ipsum voluptates, provident eum!
+      <a href="#" class="read-more">...</a>
+    </p>
+  </div>
+</div><!-- /col-lg-11 -->
+</div><!-- /row -->
+</article>
+<article>
+  <div class="row">
+   <div class="col col-lg-1 text-r">
+     <time class="data">
+      <ruby>SEP 2016<rt class="data__day">24</rt></ruby>
+    </time>
+  </div>
+  <div class="col col-lg-11 col-sm-12">
+   <div class="col col-lg-4 col-md-6 col-sm-12">
+     <a href="#"><img src=" ../img/news/post4.jpg"  class=" " alt=""></a>
+   </div>
+   <div class="col col-lg-8 col-md-6 col-sm-12">
+     <p class="post__title"><a href="#" class="post__title_link">Post Title</a></p>
+     <p class="post__smm">
+      <a href="#" class="category">Events</a>
+      <i class="fa fa-user"></i>
+      <i class="fa fa-hand-o-right"></i>
+      <i class="fa fa-comment"></i>
+    </p>
+    <p class="post__content">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic officiis reprehenderit consequatur aspernatur laboriosam eius quibusdam, atque totam tempore fugiat distinctio ipsum voluptates, provident eum!
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic officiis reprehenderit consequatur aspernatur laboriosam eius quibusdam, atque totam tempore fugiat distinctio ipsum voluptates, provident eum!
+      <a href="#" class="read-more">...</a>
+    </p>
+  </div>
+</div><!-- /col-lg-11 -->
+</div><!-- /row -->
+</article>
+<article>
+  <div class="row">
+   <div class="col col-lg-1 text-r">
+     <time class="data">
+      <ruby>SEP 2016<rt class="data__day">25</rt></ruby>
+    </time>
+  </div>
+  <div class="col col-lg-11 col-sm-12">
+   <div class="col col-lg-4 col-md-6 col-sm-12">
+     <a href="#"><img src=" ../img/news/post5.jpg"  class=" " alt=""></a>
+   </div>
+   <div class="col col-lg-8 col-md-6 col-sm-12">
+     <p class="post__title"><a href="#" class="post__title_link">Post Title</a></p>
+     <p class="post__smm">
+      <a href="#" class="category">Events</a>
+      <i class="fa fa-user"></i>
+      <i class="fa fa-hand-o-right"></i>
+      <i class="fa fa-comment"></i>
+    </p>
+    <p class="post__content">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic officiis reprehenderit consequatur aspernatur laboriosam eius quibusdam, atque totam tempore fugiat distinctio ipsum voluptates, provident eum!
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic officiis reprehenderit consequatur aspernatur laboriosam eius quibusdam, atque totam tempore fugiat distinctio ipsum voluptates, provident eum!
+      <a href="#" class="read-more">...</a>
+    </p>
+  </div>
+</div><!-- /col-lg-11 -->
+</div><!-- /row -->
+</article>
+</main>
+</div>
+</main>
+</div><!-- /page-wrap -->
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer__top-footer">
+    <div class="wrap">
+      <div class="col col-lg-4 col-md-6 col-sm-12 text-c">
+        <p><a href="#" class="logo-text">ЛНУ</a></p>
+        <p><a href="#" class="site-link">www.lnu.edu</a></p>
+        <!-- SOCIALS -->
+        <ul class="socials">
+          <li class="socials__item">
+            <a href="#" class="socials__icon fa fa-facebook" title="facebook"></a>
+          </li>
+          <li class="socials__item">
+            <a href="#" class="socials__icon fa fa-vk" title="vk"></a>
+          </li>
+          <li class="socials__item">
+            <a href="#" class="socials__icon fa fa-linkedin" title="linkedin"></a>
+          </li>
+          <li class="socials__item">
+            <a href="#" class="socials__icon fa fa-wikipedia-w" title="wikipedia"></a>
+          </li>
+        </ul><!-- /socials -->
+      </div>
+      <div class="col col-lg-8 col-md-6 col-sm-12">
+        <ul class="footer__menu menu">
+          <li class="">
+            <a href="../main.html" class="menu__link">головна</a>
+            <ul class="sub-1">
+            <li><a href="education.html" class="menu__link">освітa</a></li>
+              <li><a href="education.html" class="menu__link">ERASMUS</a></li>
+              <li><a href="events.html" class="menu__link">події</a></li>
+              <li><a href="#" class="menu__link">галерея</a></li>
+            </ul>
+          </li>
+          <li class="">
+            <a href="#" class="menu__link">інфраструктура</a>
+            <ul class="sub-1">
+              <li><a href="infrastructura.html" class="menu__link">студ. містечко</a></li>
+              <li><a href="infrastructura.html" class="menu__link">реконструкції</a></li>
+              <li><a href="infrastructura.html" class="menu__link">історичні будівлі</a></li>
+              <li><a href="ITinfrastructura.html" class="menu__link">ІТ-інфораструктура</a></li>
+            </ul>
+          </li>
+          <li class="">
+            <a href="science.html" class="menu__link">наука</a>
+            <ul class="sub-1">
+              <li><a href="science.html" class="menu__link">науковий парк</a></li>
+              <li><a href="science.html" class="menu__link">бізнес інкубатор</a></li>
+              <li><a href="science.html" class="menu__link">наукова співпраця</a></li>
+            </ul>
+          </li>
+          <li class="">
+            <a href="partneram.html" class="menu__link">пратнери</a>
+            <ul class="sub-1">
+              <li><a href="partneram.html" class="menu__link">нас підтримують</a></li>
+              <li><a href="partneram.html" class="menu__link">благодійний фонд</a></li>
+            </ul>
+          </li>
+        </ul><!-- /menu -->
+      </div>
+    </div><!-- /wrap -->
+  </div><!-- /footer-top -->
+  <!-- BOTTOM FOOTER -->
+  <div class="footer__bottom-footer">
+    <div class="wrap">
+      <div class="row">
+        <div class="col col-lg-6 col-sm-12 text-r right-line">
+         <p> &copy; Львівський національний університет імені Івана Франка</p>
+         <address><a href="#">вул. Університетська 1, м. Львів, 79000</a></address>
+         <p><a href="mailto:lnu@dom.edu" class="email-link">lnu@dom.edu</a></p>
+       </div>
+       <div class="col col-lg-6 col-sm-12 col-sm-hide">
+         <a href="../main.html" class="logo"><img src=" ../img/logo.png" alt=""></a>
+       </div>
+     </div>
+   </div><!-- /wrap -->
+ </div><!-- /bottom footer -->
+</footer>
+</body>
+</html>

@@ -1,0 +1,331 @@
+@import "fonts"
+
+//COLORS
+$clrText: #333
+$clrBlack: #000
+$clrWhite: #fff
+$clrBodyBg: #f1f1f1
+$clrBodyBg2: #f5f5f5
+$clrGrayLight: #e5e5e5
+// bottom-footer bg
+$clrElephant: #2c3840
+// blue
+$clrDeepSkyBlue: #03a9f4
+$clrNavyBlue: #1583cc
+$clrBlueLagoon: #085a78
+$clrBlueLagoon2: #074e68
+$clrBlue: #03a9f4
+// green
+$clrRioGrande: #b8d30b
+$clrCitrus: #95a105
+$clrDarkTangerine: #FFB515
+//align
+.center
+  text-align: center
+  margin: 0 auto
+  width: 100%
+  display: block
+
+// FONT
+
+//font-family
+$RR: "RobotoRegular"
+$RL: "RobotoLight"
+$RB: "RobotoBold"
+$RI: "RobotoItalic"
+$RM: "RobotoMedium"
+$RT: "RobotoThin"
+$RMi: "RobotoMediumItalic"
+$RLi: "RobotoLightItalic"
+$RBi: "RobotoBoldItalic"
+$RTi: "RobotoThinItalic"
+$RL: "RobotoLight"
+$PD: "Playfair Display"
+$RSb: "RobotoSlab-Bold"
+$RS: "Roboto Slab"
+
+html
+  font-family: sans-serif
+  -ms-text-size-adjust: 100%
+  -webkit-text-size-adjust: 100%
+  font: normal 16px/1 $RR
+  color: $clrText
+  
+
+=font($font-weight, $fsz, $line-height, $font-family, $color)
+  $font-size: $fsz / 16 // $htmlFontSize: 16px
+  font: $font-weight $font-size+em/$line-height $font-family, Helvetica, sans-serif
+  color: $color
+
+//font-size
+$htmlFontSize: 16px
+$font-family: 'Lato', 'RobotoRegular', 'Open Sans', 'Roboto Sald', Helvetica, sans-serif
+h3
+  +font(600, 22, 1.1, $font-family, $clrBlack)
+h2
+  +font(600, 28, 1.1, $font-family, $clrBlack)
+h1
+  +font(600, 32, 1.1, $font-family, $clrBlack)
+h1, h2, h3
+  margin: 20px 0 10px 0
+p
+  +font(300, 16, 1.4, $font-family, $clrText)
+  margin: 0 0 10px
+.p18  
+  +font(300, 18, 1.25, $RR, $clrText)
+
+/* Reset browser sty;e*/
+a
+  text-decoration: none
+  color: $clrText
+  cursor: pointer
+
+img
+  position: relative
+  max-width: 100%
+  margin: 0 auto
+  cursor: pointer
+  -moz-filter: grayscale(1)
+  -webkit-filter: grayscale(1)
+  -o-filter: grayscale(1)
+  -ms-filter: grayscale(1)
+  filter: grayscale(1) 
+  &:hover
+    -moz-filter: grayscale(0)
+    -webkit-filter: grayscale(0)
+    -o-filter: grayscale(0)
+    -ms-filter: grayscale(0)
+    filter: grayscale(0) 
+
+
+.img
+  max-width: 100%
+  width: 100%
+  height: auto
+  margin: 0 auto
+  &__wrap
+    display: block
+    position: relative
+    margin-bottom: 0.5em
+  &__overlay
+    display: block
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 100%
+    background: #000
+    color: #fff
+    padding: 10px
+    &_b
+      background: $clrDeepSkyBlue
+  &:hover + &__overlay
+    background: $clrDeepSkyBlue
+  &__center
+    width: 100%
+  &_noGrayscale
+    filter: grayscale(0)
+    -webkit-filter: grayscale(0)
+
+address
+  font-style: normal
+  margin: 0
+
+li
+  list-style-type: none
+
+/*  STYLES */
+%hoverBracket
+  &:after
+    content: ' ] '
+    color: $clrBlue
+  &:before
+    content: ' [ '
+    color: $clrBlue 
+
+.logo-text
+  position: relative
+  font-family: $RB
+  font-weight: bold
+  font-size: 3em
+  text-align: center
+  @extend %hoverBracket
+  &_sm
+    display: block
+    font-size: 2em
+    margin-top: -5px
+  &_esm
+    font-size: 1.25em
+    margin: 0 5px
+
+.site-link
+  position: relative
+  display: block
+  font-size: 1.25em
+  margin-bottom: 5px
+  &:before, &:after
+    content: ' --- '
+
+.contact-block
+  margin: 5px 0
+  border-left: 1px solid #ccc
+  padding-left: 1.5em
+
+.fa
+  cursor: pointer
+
+.read-more
+  display: block
+  margin-top: 0.5em
+  color: $clrDeepSkyBlue
+  font-weight: bold
+  &:before
+    content: 'READ MORE'
+  &:hover
+    color: darken($clrDeepSkyBlue, 10%)
+
+.category
+  margin-right: 10px
+  padding: 5px 10px
+  background: $clrDeepSkyBlue
+  color: $clrWhite
+  border-radius: 4px
+  font-style: normal
+  font-weight: bold
+  &:hover
+    background: darken($clrDeepSkyBlue, 10%)
+
+.border
+  width: 100px
+  height: 6px
+  margin-bottom: 0.7em
+  border: none
+  background: $clrDeepSkyBlue
+  text-align: left
+  &_middle
+    display: inline-block
+    margin: 0 auto
+
+.fieldset
+  border: none
+  border-top: 1px solid $clrDeepSkyBlue
+  text-align: center
+  margin-top: 1em
+  h1
+    +font(600, 30, 1, $RS, #000)
+  &__legend
+    padding: 0 15px
+    width: auto
+    margin: 0 auto
+
+.float-l
+  float: left
+.float-r
+  float: right
+.text-indent 
+  text-indent: 1.5em
+.text-r
+  text-align: right
+.text-l
+  text-align: left
+.text-j 
+  text-align: justify
+.text-c
+  text-align: center
+.right-line
+  border-right: 2px solid #fff
+  padding-right: 1em
+.bottom-line
+  border-bottom: 2px solid $clrDeepSkyBlue
+  padding-bottom: 1em
+.bg-w
+  background: linear-gradient($clrWhite, transparent)
+  // box-shadow: 0 2px 15px 1px #ccc
+  border-radius: 5px
+  padding: 1em
+
+.frstLetter
+  text-indent: 0
+  &:first-letter
+    float: left
+    margin: -0.25em 8px -0.5em 0
+    color: $clrDeepSkyBlue
+    font-size: 5em
+    font-weight: bold
+
+//Unorder List
+.ul
+  &__list
+    position: relative
+    +font(400, 18, 1.1, $RR, $clrText)
+    margin-bottom: 1em
+    &:before
+      content: '\f078'
+      position: absolute
+      top: 0
+      left: -25px
+      font-family: 'FontAwesome'
+      color: $clrDeepSkyBlue
+
+.columns
+  &-2
+    -webkit-columns: 2
+    -moz-columns: 2
+    columns: 2
+    -webkit-column-gap: 1.5em
+    -moz-column-gap: 1.5em
+    column-gap: 1.5em
+  &-3
+    -webkit-columns: 3
+    -moz-columns: 3
+    columns: 3
+    -webkit-column-gap: 1.5em
+    -moz-column-gap: 1.5em
+    column-gap: 1.5em
+
+  
+.data
+  display: inline-block
+  color: #ffb606
+  font-weight: bold
+  font-family: $RR
+  cursor: pointer
+  &__day
+    display: block
+    font-size: 2.5em
+    line-height: 1
+    &:before
+      content: "["
+    &:after
+      content: "]"
+      
+@media screen and (max-width: 62rem) //992px
+  font-size: 16px
+@media screen and (max-width: 48rem) //768px
+  font-size: 16px
+
+@media screen and (max-width: 40rem) //640px
+  .logo-text
+    font-size: 1.5em
+  .site-link
+    &:after, &:before
+      content: " "
+  .footer__bottom-footer .col
+    text-align: left
+    border: 0
+  .nav-menu  
+    text-align: left
+    max-height: 0
+  .show-nav-menu 
+    max-height: 20em
+  .toggle-nav-menu
+    display: block
+
+
+
+.header-menu-l 
+  width: 100%
+  li
+    display: inline-block
+
+.main-content
+  margin-top: 0.6em
