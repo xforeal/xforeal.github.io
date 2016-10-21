@@ -1,0 +1,298 @@
+@import "bootstrap.css"
+@import "colors"
+@import "fonts"
+@import "slider"
+
+//RESET
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  appearance: none
+  outline: none
+  &::selection
+    background: $orange
+    color: #fff
+
+html, body
+  height: 100%
+
+img
+  max-width: 100%
+  cursor: pointer
+  &:hover
+    filter: brightness(1.2) 
+
+%clearfix
+  &::after
+    content: " "
+    clear: both
+    display: table
+//END reset
+
+
+//BEGIN sticky footer
+$footerHeight: 75px
+.page-wrap
+  @extend %clearfix
+  min-height: 100%
+  margin-bottom: -$footerHeight
+  &::after
+    content: " "
+    display: table
+    height: $footerHeight
+.footer
+  @extend %clearfix
+  height: $footerHeight
+  overflow: hidden
+  line-height: $footerHeight
+  background: $grey url('../img/bg1.jpg')
+  color: $white
+//END footer
+
+//BEGIN header
+$headerHeight: 75px
+.header
+  &__top
+    background: $grey url('../img/bg1.jpg')
+    height: $headerHeight
+    .container
+      position: relative
+  &__bottom
+    background: $lightGrey
+    height: $headerHeight
+//END header
+
+//BEGIN nav-menu
+.nav-menu
+  background: $lightGrey
+  &__item
+    list-style-type: none
+    position: relative
+    display: inline-block
+    height: $headerHeight
+    line-height: $headerHeight
+    padding: 0 30px
+    &:hover
+      background: $orange
+      color: $white
+      box-shadow: inset 0 -3px 0 0 $grey
+      &::before
+        content: "\25b2"
+        color: $grey
+        width: 20px
+        height: 20px
+        position: absolute
+        top: 50%
+        left: 50%
+        margin-left: -10px
+        margin-top: -8px
+        text-align: center
+    @media screen and(max-width: 480px)
+      display: block
+      height: 50px
+      line-height: 50px
+  &__link
+    display: block
+    font-weight: bold
+// END nav-menu
+
+//BEGIN overlay
+$triangleWidth: 365px
+.overlay-triangle
+  display: inline-block
+  position: absolute
+  top: 0
+  right: 0px
+  width: 0
+  height: 0
+  border-style: solid
+  &--bottom
+    z-index: 100
+    border-width: 0 $triangleWidth 150px 0
+    border-color: transparent  #fff transparent transparent
+  &--top
+    z-index: 200
+    border-width: 0 $triangleWidth - 2 148px 0
+    border-color: transparent  $black transparent transparent
+    &:hover
+      border-color: transparent  $orange transparent transparent
+    
+.overlay-text
+  position: absolute
+  right: 25px
+  top: 10px
+  z-index: 300
+  color: $white
+  font-size: 20px
+  font-style: normal
+  text-transform: uppercase
+  text-align: right
+
+.overlay-trapeze
+  display: block
+  position: absolute
+  top: 24px
+  left: 0
+  height: 0 
+  width: 200px
+  border-bottom: 50px solid $lightGrey
+  border-right: 50px solid transparent
+  border-left: 0px solid transparent
+  z-index: 100
+  &:hover
+    border-bottom: 50px solid $white 
+//END overlay
+
+//BEGIN form
+.form__input, .form__textarea
+  display: block
+  width: 100%
+  padding: 5px 10px
+  margin: 1em 0
+  border: 1px solid $lightGrey
+  background: $fieldBg
+  font-size: 16px
+  cursor: pointer
+  &:focus
+    border-color: $orange
+  // &:invalid
+  //  border-color: $fieldError
+  &:valid
+    border-color: $fieldValid
+
+.form__textarea
+  resize: none
+//END form
+
+//BEGIN cta-button
+.btn
+  display: block
+  margin: 15px auto
+  padding: 20px 25px
+  width: auto
+  border: none
+  cursor: pointer
+  &__submit
+    &--cta
+      background: $cta-btn-bg
+      color: $cta-btn-color
+      text-transform: uppercase
+      font-weight: bold
+      font-size: 20px
+      &:hover
+        background: darken($cta-btn-bg, 5%)
+    &--oder
+      background: none
+      border: 1px solid $orange 
+      color: $orange
+      font-size: 18px
+      &:hover
+        background: $orange
+        color: $white
+//END cta-button
+
+//BEGIN read-more link
+.read-more
+  display: inline-block
+  margin: 15px 0
+  font-weight: bold
+  font-size: 18px
+  border-bottom: 1px solid $black
+  &:hover
+    color: $orange
+    border-bottom: 1px dashed $orange
+  &::after
+    content: ">"
+    position: absolute
+    margin-left: 5px
+    color: $orange
+    font-weight: bold
+//END read-nore link
+
+//BEGIN banner
+$bannerHeight: 450px
+.banner
+  position: relative
+  width: 100%
+  height: $bannerHeight
+  background: $grey
+  z-index: -10
+  &__content
+    z-index: 10
+    text-shadow: 1px 1px 0px $grey
+    margin-top: 3.5em
+    font-size: 2.25em
+    line-height: 1
+    color: $white
+    font-family: "PTSans Regular", sans-serif
+    @media screen and(max-width: 768px)
+      margin-top: 150px
+      font-size: 20px
+  &__bg
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    min-height: $bannerHeight
+    background: #333 url('../img/banner.jpg') no-repeat 0 0
+    background-size: cover
+    background-attachment: fixed
+    z-index: -1
+  &__overlay
+    box-sizing: content-box
+    display: block
+    position: absolute
+    top: 0
+    right: 0
+    height: 0 
+    width: 50%
+    border-bottom: $bannerHeight solid rgba($black, 0.6)
+    border-left: 200px solid transparent
+    border-right: 0px solid transparent
+    z-index: 1
+//END banner
+
+.section
+  padding: 1.5em 0 2em 0
+
+//BEGIN contacts
+.contacts
+  position: relative
+  &__wrap
+    @extend %clearfix
+    height: 470px
+    overflow: hidden
+    margin-bottom: 2em
+  &__caption
+    height: 100%
+    position: absolute
+    top: 0
+    left: 0
+    background: $grey url('../img/bg2.jpg')
+    color: $white
+    padding: 40px 
+    .w-60
+      display: inline-block
+      min-width: 145px
+    .w-40
+      display: inline-block
+      min-width: 50px
+  &__map img
+    width: 100%
+    margin-left: 235px
+//END contacts
+
+//Custom
+.figure
+  position: relative
+  overflow: hidden
+  margin-bottom: 10px
+
+.owerlay__wrap
+  width: 100%
+  overflow: hidden
+
+.logo
+  &__header
+    margin: 5px 10px

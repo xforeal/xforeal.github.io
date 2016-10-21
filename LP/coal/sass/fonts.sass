@@ -1,0 +1,49 @@
+@import "colors"
+
+@font-face
+  font-family: 'PTSans Bold'
+  src: url('../fonts/PT_Sans-Bold/PT_Sans-Bold.eot')
+  src: local('../fonts/PT_Sans-Bold'), url('../fonts/PT_Sans-Bold/PT_Sans-Bold.woff') format('woff'), url('../fonts/PT_Sans-Bold/PT_Sans-Bold.ttf') format('truetype'), url('../fonts/PT_Sans-Bold/PT_Sans-Bold.svg') format('svg')
+  font-weight: normal
+  font-style: normal
+
+@font-face
+  font-family: 'PTSans Regular'
+  src: url('../fonts/PT_Sans-Regular.eot')
+  src: local('../fonts/PT_Sans-Regular'), url('../fonts/PT_Sans-Regular/PT_Sans-Regular.woff') format('woff'), url('../fonts/PT_Sans-Regular/PT_Sans-Regular.ttf') format('truetype'), url('../fonts/PT_Sans-Regular/PT_Sans-Regular.svg') format('svg')
+  font-weight: normal
+  font-style: normal
+
+// Fonts Mixin
+=font($font-weight, $font-size, $line-height, $font-family, $color)
+  $ff: '' + $font-family + ''
+  font: $font-weight $font-size + px / $line-height +px $ff
+  color: $color
+
+html
+  text-size-adjust: 100%
+
+body
+  +font(normal, 16, 20, PTSans Regular, $grey)
+
+.heading
+  margin-bottom: 10px
+  &__2
+    +font(bold, 36, 38, PTSans Regular, $black)
+    margin-bottom: 1em
+    &::before
+      content: "|"
+      margin-right: 5px
+      font-weight: bold
+      color: $orange
+  &__4
+    +font(bold, 20, 24, PTSans Regular, $orange)
+   
+.text
+  font-size: 22px
+  line-height: 28px 
+.text-large
+  +font(normal, 18, 24, PTSans Regular, $grey)
+.phone
+  @extend .text-large
+  font-weight: bold
