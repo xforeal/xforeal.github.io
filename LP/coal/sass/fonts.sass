@@ -14,36 +14,39 @@
   font-weight: normal
   font-style: normal
 
+html
+  text-size-adjust: 100%
+  font-style: 16px
+  font-family: Helvetica, sans-serif
+
 // Fonts Mixin
 =font($font-weight, $font-size, $line-height, $font-family, $color)
   $ff: '' + $font-family + ''
-  font: $font-weight $font-size + px / $line-height +px $ff
+  font: $font-weight $font-size + rem / $line-height $ff
   color: $color
 
-html
-  text-size-adjust: 100%
-
 body
-  +font(normal, 16, 20, PTSans Regular, $grey)
+  +font(normal, 1.1, 1.25, PTSans Regular, $gray)
 
 .heading
-  margin-bottom: 10px
+  margin-bottom: 0.8em
   &__2
-    +font(bold, 36, 38, PTSans Regular, $black)
-    margin-bottom: 1em
+    +font(bold, 2.25, 1.15, PTSans Regular, $black)
+    margin-bottom: 0.75em
     &::before
       content: "|"
       margin-right: 5px
       font-weight: bold
       color: $orange
   &__4
-    +font(bold, 20, 24, PTSans Regular, $orange)
+    +font(bold, 1.25, 1.5, PTSans Regular, $orange)
    
 .text
-  font-size: 22px
-  line-height: 28px 
+  font-size: 1.375rem
+  line-height: 1.25
+  margin-bottom: 0.75em
 .text-large
-  +font(normal, 18, 24, PTSans Regular, $grey)
+  +font(normal, 1.225, 1.25, PTSans Regular, $gray)
 .phone
   @extend .text-large
   font-weight: bold

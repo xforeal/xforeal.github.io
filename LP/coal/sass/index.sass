@@ -12,7 +12,7 @@
   outline: none
   &::selection
     background: $orange
-    color: #fff
+    color: $white
 
 html, body
   height: 100%
@@ -30,9 +30,51 @@ img
     display: table
 //END reset
 
+//BEGIN banner
+$bannerHeight: 450px
+.banner
+  position: relative
+  width: 100%
+  height: $bannerHeight
+  background: $gray
+  z-index: -10
+  &__content
+    z-index: 10
+    text-shadow: 1px 1px 0px $gray
+    margin-top: 3.5em
+    font-size: 2.25em
+    line-height: 1
+    color: $white
+    font-family: "PTSans Regular", sans-serif
+    @media screen and(max-width: 768px)
+      margin-top: 150px
+      font-size: 20px
+  &__bg
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    min-height: $bannerHeight
+    background: #333 url('../img/banner.jpg') no-repeat 0 0
+    background-size: cover
+    background-attachment: fixed
+    z-index: -1
+  &__overlay
+    box-sizing: content-box
+    display: block
+    position: absolute
+    top: 0
+    right: 0
+    height: 0 
+    width: 50%
+    border-bottom: $bannerHeight solid rgba($black, 0.6)
+    border-left: 200px solid transparent
+    border-right: 0px solid transparent
+    z-index: 1
+//END banner
 
 //BEGIN sticky footer
-$footerHeight: 75px
+$footerHeight: 4.5rem
 .page-wrap
   @extend %clearfix
   min-height: 100%
@@ -46,26 +88,26 @@ $footerHeight: 75px
   height: $footerHeight
   overflow: hidden
   line-height: $footerHeight
-  background: $grey url('../img/bg1.jpg')
+  background: $gray url('../img/bg1.jpg')
   color: $white
 //END footer
 
 //BEGIN header
-$headerHeight: 75px
+$headerHeight: $footerHeight
 .header
   &__top
-    background: $grey url('../img/bg1.jpg')
+    background: $gray url('../img/bg1.jpg')
     height: $headerHeight
     .container
       position: relative
   &__bottom
-    background: $lightGrey
+    background: $lightGray
     height: $headerHeight
 //END header
 
 //BEGIN nav-menu
 .nav-menu
-  background: $lightGrey
+  background: $lightGray
   &__item
     list-style-type: none
     position: relative
@@ -76,10 +118,10 @@ $headerHeight: 75px
     &:hover
       background: $orange
       color: $white
-      box-shadow: inset 0 -3px 0 0 $grey
+      box-shadow: inset 0 -3px 0 0 $gray
       &::before
         content: "\25b2"
-        color: $grey
+        color: $gray
         width: 20px
         height: 20px
         position: absolute
@@ -88,17 +130,18 @@ $headerHeight: 75px
         margin-left: -10px
         margin-top: -8px
         text-align: center
-    @media screen and(max-width: 480px)
+    @media screen and(max-width: 30rem)
       display: block
-      height: 50px
-      line-height: 50px
+      height: 3.125rem
+      line-height: 3.125rem
   &__link
     display: block
     font-weight: bold
+    font-size: 1.1em
 // END nav-menu
 
 //BEGIN overlay
-$triangleWidth: 365px
+$triangleWidth: 22.8125rem
 .overlay-triangle
   display: inline-block
   position: absolute
@@ -109,11 +152,11 @@ $triangleWidth: 365px
   border-style: solid
   &--bottom
     z-index: 100
-    border-width: 0 $triangleWidth 150px 0
-    border-color: transparent  #fff transparent transparent
+    border-width: 0 $triangleWidth 9.375rem 0
+    border-color: transparent  $white transparent transparent
   &--top
     z-index: 200
-    border-width: 0 $triangleWidth - 2 148px 0
+    border-width: 0 $triangleWidth - 0.1875rem 9.25rem 0
     border-color: transparent  $black transparent transparent
     &:hover
       border-color: transparent  $orange transparent transparent
@@ -136,7 +179,7 @@ $triangleWidth: 365px
   left: 0
   height: 0 
   width: 200px
-  border-bottom: 50px solid $lightGrey
+  border-bottom: 50px solid $lightGray
   border-right: 50px solid transparent
   border-left: 0px solid transparent
   z-index: 100
@@ -150,7 +193,7 @@ $triangleWidth: 365px
   width: 100%
   padding: 5px 10px
   margin: 1em 0
-  border: 1px solid $lightGrey
+  border: 1px solid $lightGray
   background: $fieldBg
   font-size: 16px
   cursor: pointer
@@ -168,7 +211,8 @@ $triangleWidth: 365px
 //BEGIN cta-button
 .btn
   display: block
-  margin: 15px auto
+  margin: 1em auto
+  margin-top: 1.25em
   padding: 20px 25px
   width: auto
   border: none
@@ -210,52 +254,6 @@ $triangleWidth: 365px
     font-weight: bold
 //END read-nore link
 
-//BEGIN banner
-$bannerHeight: 450px
-.banner
-  position: relative
-  width: 100%
-  height: $bannerHeight
-  background: $grey
-  z-index: -10
-  &__content
-    z-index: 10
-    text-shadow: 1px 1px 0px $grey
-    margin-top: 3.5em
-    font-size: 2.25em
-    line-height: 1
-    color: $white
-    font-family: "PTSans Regular", sans-serif
-    @media screen and(max-width: 768px)
-      margin-top: 150px
-      font-size: 20px
-  &__bg
-    position: absolute
-    top: 0
-    left: 0
-    width: 100%
-    min-height: $bannerHeight
-    background: #333 url('../img/banner.jpg') no-repeat 0 0
-    background-size: cover
-    background-attachment: fixed
-    z-index: -1
-  &__overlay
-    box-sizing: content-box
-    display: block
-    position: absolute
-    top: 0
-    right: 0
-    height: 0 
-    width: 50%
-    border-bottom: $bannerHeight solid rgba($black, 0.6)
-    border-left: 200px solid transparent
-    border-right: 0px solid transparent
-    z-index: 1
-//END banner
-
-.section
-  padding: 1.5em 0 2em 0
-
 //BEGIN contacts
 .contacts
   position: relative
@@ -263,31 +261,53 @@ $bannerHeight: 450px
     @extend %clearfix
     height: 470px
     overflow: hidden
-    margin-bottom: 2em
+    margin-bottom: 1em
   &__caption
     height: 100%
     position: absolute
     top: 0
     left: 0
-    background: $grey url('../img/bg2.jpg')
+    background: $gray url('../img/bg2.jpg')
     color: $white
-    padding: 40px 
+    padding: 2.5em
     .w-60
       display: inline-block
-      min-width: 145px
+      min-width: 9.0625em
     .w-40
       display: inline-block
-      min-width: 50px
+      min-width: 3.125em
   &__map img
     width: 100%
-    margin-left: 235px
+    margin-left: 14.6875em
 //END contacts
 
 //Custom
+.section
+  margin: 1em 0
+  padding: 2em 0
+  @media screen and(max-width: 30rem)
+    padding: 0
+  &__banner
+    margin: 0
+  &__contacts
+    padding-top: 0
+    padding-bottom: 4.5em
+    @media screen and(max-width: 30rem)
+      padding-bottom: 1em
+  &__news
+    padding-bottom: 1em
+  &__coal
+    background: $lightGray
+    padding: 1.5em 0
+
+.collapse
+  padding: 0 !important
+  margin: 0 !important
+
 .figure
   position: relative
   overflow: hidden
-  margin-bottom: 10px
+  margin-bottom: 1.2em
 
 .owerlay__wrap
   width: 100%
