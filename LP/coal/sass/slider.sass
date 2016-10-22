@@ -1,0 +1,61 @@
+$slider-height: 25rem
+$toggle: #aaa
+.slider 
+  margin: 0 auto
+  width: 100%
+
+.slide
+  position: absolute
+  display: none
+  height: 100%
+  width: 100%
+  font-size: 1.125rem
+  line-height: 1.25
+  &:first-child 
+    display: block
+  &__wrap 
+    height: $slider-height
+    overflow: hidden
+    position: relative
+  &__group 
+    height: 100%
+    position: relative
+    width: 90%
+    margin: auto
+
+.slide__toggle
+  position: relative
+  height: $slider-height
+  width: 100%
+  margin: 0 auto
+  top: -$slider-height
+  color: $toggle
+  font-size: 4em
+  font-weight: 300
+
+.previous_btn, .next_btn 
+  cursor: pointer
+  opacity: 0.7
+
+$top: 28%
+.previous_btn
+  position: absolute
+  top: $top
+  left: 0
+  &:before
+    content: '\2039'
+  &:hover
+    opacity: 1
+    color: darken($toggle, 20%)
+.next_btn
+  position: absolute
+  top: $top
+  right: 0
+  &:before
+    content: '\203a'
+  &:hover
+    opacity: 1
+    color: darken($toggle, 20%)
+
+
+
