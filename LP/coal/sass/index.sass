@@ -34,21 +34,25 @@ img
 $bannerHeight: 450px
 .banner
   position: relative
+  display: flex
+  align-items: center
+  justify-content: center
   width: 100%
   height: $bannerHeight
-  background: $gray
+  overflow: hidden
   z-index: -10
+  background: #ccc
   &__content
     z-index: 10
     text-shadow: 1px 1px 0px $gray
-    margin-top: 3.5em
     font-size: 2.25em
     line-height: 1
     color: $white
     font-family: "PTSans Regular", sans-serif
+    margin-left: 50%
     @media screen and(max-width: 768px)
-      margin-top: 150px
       font-size: 20px
+      margin-top: 100px
   &__bg
     position: absolute
     top: 0
