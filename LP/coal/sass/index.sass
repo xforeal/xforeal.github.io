@@ -60,16 +60,13 @@ $bannerHeight: 450px
     background-attachment: fixed
     z-index: -1
   &__overlay
-    box-sizing: content-box
-    display: block
     position: absolute
     top: 0
     right: 0
-    height: 0 
-    width: 50%
-    border-bottom: $bannerHeight solid rgba($black, 0.6)
-    border-left: 200px solid transparent
-    border-right: 0px solid transparent
+    width: 100%
+    height: $bannerHeight
+    opacity: 0.5
+    background-image: linear-gradient(135deg, transparent 50%, #000 50%)
     z-index: 1
 //END banner
 
