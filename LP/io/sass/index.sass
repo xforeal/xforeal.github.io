@@ -1,0 +1,513 @@
+@import "colors"
+@import "fonts"
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  appearance: none
+  outline: none
+  &::selection
+    background: $white
+
+// img
+//   max-width: 100%
+
+a
+  color: inherit
+  text-decoration: none
+
+%clearfix
+  &::after
+    content: " "
+    clear: both
+    display: table
+
+html 
+  font-family: sans-serif
+  text-size-adjust: 100%
+
+body
+  font-smoothing: antialiased
+  display: flex
+  flex-direction: column
+  min-height: 100vh
+  
+.page-wrap
+  flex: 1
+
+//BEGIN grid 12 cols: 1200 | 992 | 768
+$container-padding: 1em
+.container
+  @extend %clearfix
+  width: 100%
+  margin: auto
+  padding: 0 $container-padding
+  @media (min-width: 48rem) 
+    width: 46.875rem
+  @media (min-width: 62rem) 
+    width: 60.625rem
+  @media (min-width: 75rem) 
+    width: 73.125rem
+
+.row
+  @extend %clearfix
+  overflow: hidden
+  margin: 0 (-$container-padding / 2)
+  
+$col-gap: 1.5em  
+[class*="lg-"], [class*="md-"], [class*="sm"], [class*="xs"]
+  float: left
+  padding: 0 $col-gap / 2
+  
+$cols: 12
+@function col-width($col)
+  @return $col * 100% / $cols
+
+@for $i from 1 through $cols
+  .xs-#{$i}
+    width: col-width($i)
+  .xs-gap-#{$i}
+    margin-left: col-width($i)
+@media screen and(min-width: 30rem) // 480px
+  @for $i from 1 through $cols
+    .sm-#{$i}
+      width: col-width($i)
+    .sm-gap-#{$i}
+      margin-left: col-width($i)
+@media screen and(min-width: 40rem) // 640px
+  @for $i from 1 through $cols
+    .md-#{$i}
+      width: col-width($i)
+    .md-gap-#{$i}
+      margin-left: col-width($i)
+@media screen and(min-width: 48rem) // 768px
+  @for $i from 1 through $cols
+    .xmd-#{$i}
+      width: col-width($i)
+@media screen and(min-width: 62rem) // 992px
+  @for $i from 1 through $cols
+    .lg-#{$i}
+      width: col-width($i)
+    .lg-gap-#{$i}
+      margin-left: col-width($i)
+@media screen and(min-width: 75rem) // 1200px
+  @for $i from 1 through $cols
+    .xlg-#{$i}
+      width: col-width($i)
+//END grid
+
+//BEGIN nav menu
+$header-height: 50px
+$nav-item-width: 150px
+$nav-item-height: 40px
+$nav-item-pdlr: 20px
+$header-bg: $white
+$header-color: $white
+$header-color-invert: $black
+.header
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 100
+  @extend %clearfix
+  line-height: $header-height
+  color: $header-color
+  padding: 2px auto
+  width: 100%
+  font-size: 20px
+  &--collapse
+    background: rgba($header-bg, 0.7)
+    color: $header-color-invert
+    .nav__link
+      padding: 0 15px
+.toggle--hide,
+.toggle--show 
+  display: none
+@media screen and(max-width: 30rem) //480px
+  .toggle--hide,
+  .toggle--show 
+    display: inline-block
+    margin-left: 1em
+  #nav-toggle:target
+    height: auto
+    overflow: hidden  
+    .toggle--show
+      display: none
+    .toggle--hide
+      display: inline-block
+  #nav-toggle:not(:target)
+    height: $header-height
+    overflow: hidden  
+    .toggle--show
+      display: inline-block
+    .toggle--hide
+      display: none
+  
+.logo
+  display: inline-block
+  width: auto
+  float: left
+  &::before
+    content: " [ "
+    color: $yellow2
+  &::after
+    content: " ] "
+    color: $yellow2
+
+.nav
+  float: right
+  //font-size: 0
+  @media screen and(max-width: 30rem) //480px
+    clear: both
+    display: block
+    width: 100%
+  & &
+    z-index: 10
+    position: absolute
+    display: none
+    & .nav
+      left: 100% 
+      top: 0
+    @media screen and(max-width: 30rem) //480px
+      position: relative
+      & .nav
+        left: 0
+.nav__link
+  font-size: 20px
+  display: block
+  padding: 0 $nav-item-pdlr
+  margin-bottom: 0.8px
+ 
+.nav__item
+  list-style-type: none
+  display: inline-block
+  position: relative
+  &:hover
+    color: $yellow2
+    & > .nav
+      display: block
+  & &
+    line-height: 2
+    display: block
+    width: $nav-item-width
+    background: rgba($header-bg, 0.8)
+    color: $black
+    &:hover
+      background: lighten($header-bg, 0.1)
+      box-shadow: inset 6px 0 0 0 $yellow2
+      color: $yellow2
+  @media screen and(max-width: 30rem)
+    line-height: 2
+    display: block
+    width: 100%
+    text-align: left
+    background: rgba($header-bg, 0.7)
+    color: $black
+    & &
+      width: 100%
+//END nav menu
+
+//BEGIN section
+.section
+  @extend %clearfix
+  padding: 1.5em 0
+  background: $light-grey
+  &--0
+    // margin-top: $header-height
+    padding: 0
+  &--1
+    background: $light-grey2
+    font-size: 1em
+    padding: 1.75em 0px
+  &--8
+    background: $light-grey
+  @media screen and(max-width: 62rem) //992px
+    padding: 10px 0
+//END section
+
+$block-gutter: 25px
+.block
+  width: 60%
+  padding-top: 10%
+  @media screen and(max-width: 62rem)
+    padding-top: 2em
+  &--0
+    width: 45%
+    margin: 1em auto
+    text-align: center
+    padding: 0
+    @media screen and(max-width: 45rem) //
+      width: 70%
+  &--l
+    margin-left: auto
+    margin-right: $block-gutter
+    @media screen and(max-width: 62rem)
+      margin-right: auto
+  &--r
+    margin-left: $block-gutter
+    margin-right: auto
+    @media screen and(max-width: 62rem)
+      margin-left: auto
+  @media screen and(max-width: 40rem)
+    width: 90%
+$img-gutter: 100px
+.img  
+  display: block
+  width: 95%
+  cursor: pointer
+  transition: transform 300ms ease-in-out
+  box-shadow: -8px 8px 15px 5px rgba($white, 0.5), 8px 8px 15px 5px rgba($white, 0.5)
+  &:hover
+    filter: brightness(1.2)
+    box-shadow: -8px 8px 15px 5px $white, 8px 8px 15px 5px $white
+  &--l
+    margin-left: auto
+    @media screen and(max-width: 62rem)
+      margin-right: auto
+  &--r
+    margin-right: auto
+    @media screen and(max-width: 62rem)
+      margin-left: auto
+  &--no-style
+    box-shadow: none
+    &:hover
+      filter: none
+      box-shadow: none
+
+//BEGIN button
+.btn
+  display: block
+  padding: 0.5em 1.2em
+  cursor: pointer
+  transition: all 300ms ease
+  margin: 1em auto
+  font-size: 1.25em
+  width: auto
+  &--cta
+    border: 2px solid $btn-cta
+    color: $btn-cta
+    background: transparent
+    &:hover
+      border: 2px solid $yellow2
+      color: $yellow2
+  &--1
+    margin-top: 1em
+    background: $black
+    border: 2px solid $black
+    color: $white
+    &:hover
+      background: transparent
+      border: 2px solid $white
+      color: $white
+//END button
+
+//BEGIN footer
+.footer
+  background: $light-grey2
+  font-size: 13px
+  line-height: 1.35
+  .heading
+    color: $black
+  &__top
+    padding: 1em 10px
+    padding-bottom: 2.5em
+  &__bottom
+    padding: 1em 0
+    background: $black
+    color: #ccc
+    p
+      padding-top: 10px
+
+//footer nav menu
+.menu
+  margin-top: 0.5em
+  &__item
+    list-style-type: none
+    white-space: nowrap
+  &__link
+    display: block
+    width: 100%
+    cursor: pointer
+    &:hover
+      color: $yellow2
+//END footer
+
+//BEGIN banner
+$banner-height: 500px
+.banner
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 100%
+  height: $banner-height
+  overflow: hidden
+  z-index: 0
+  &__caption
+    position: absolute
+    padding-top: 2em
+    color: $white
+    text-align: center
+    // text-shadow: 0px 0px 2px $white, 1px -2px 10px $black
+    z-index: 2
+    p
+      margin: 1em 0 2em 0
+      font-size: 1.5em
+      line-height: 1.2
+      border-top: 1px solid rgba($white, 0.5)
+      border-bottom: 1px solid rgba($white, 0.5)
+      padding: 0.5em 0
+      @media screen and(max-width: 480px)
+        font-size: 1.25em
+  &__bg, &__gradient
+    position: absolute
+    width: 100%
+    min-height: $banner-height
+  &__bg
+    background: $gradient1 url('../img/bg3.jpeg') no-repeat 0 0
+    background-size: cover
+    background-attachment: fixed
+    object-fit: cover
+    z-index: 0
+  &__gradient
+    opacity: 0.5
+    background-image: linear-gradient(45deg, $gradient1 30%, transparent, $gradient2 70%)
+    z-index: 1
+//END banner
+
+//BEGIN slider
+$slider-width: 100%
+$slider-height: 230px
+.slider 
+  margin: 0 auto
+  max-width: 70%
+  @media screen and(max-width: 720px)
+    max-width: 100%
+.slide 
+  display: none
+  height: 100%
+  position: absolute
+  width: 100%
+  &__wrap 
+    @extend %clearfix
+    height: $slider-height
+    position: relative
+    @media screen and(max-width: 30rem)
+      height: 350px
+  &__group 
+    position: relative
+    height: 100%
+    width: 70%
+    margin: 0 auto
+  &:first-child 
+    display: block
+  &__buttons 
+    position: absolute
+    bottom: 0
+    left: 0
+    right: 0
+    text-align: center
+    margin-bottom: 0px
+    @media screen and(max-width: 30rem)
+      display: none
+//slide button
+a.slide_btn 
+  color: $slide-btn
+  font-size: 1.5em
+  margin: 0 5px
+  -webkit-transition: all 0.4s ease-in-out
+  -moz-transition: all 0.4s ease-in-out
+  -ms-transition: all 0.4s ease-in-out
+  -o-transition: all 0.4s ease-in-out
+  transition: all 0.4s ease-in-out
+  &.active, &:hover 
+    color: $yellow2
+    cursor: pointer
+//slide toggles
+.slide__toggle 
+  height: $slider-height
+  margin: 0 auto
+  max-width: $slider-width
+  position: relative
+  top: - $slider-height + 20px
+  color: $black
+  font-size: 2rem
+  font-weight: 300
+  z-index: 0
+  @media screen and(max-width: 30rem)
+    top: -95%
+  &--previous, &--next 
+    cursor: pointer
+    height: 65px
+    transition: all 400ms ease-in-out
+    width: 65px
+    &:hover
+      color: $yellow2
+  &--previous 
+    bottom: 0
+    left: 50px
+    margin: auto
+    position: absolute
+    top: 0
+    @media screen and(max-width: 30rem)
+      left: 15px
+    &:before
+      content: '<'
+  &--next 
+    text-align: right
+    bottom: 0
+    margin: auto
+    position: absolute
+    right: 50px
+    top: 0
+    @media screen and(max-width: 30rem)
+      right: 15px
+    &:before
+      content: '>'
+//END slider
+ 
+//BEGIN slide content
+.author
+  img
+    border-radius: 50%
+    cursor: pointer
+    box-shadow: inset 0 0 20px 5px $white 
+    padding: 10px
+    transition: transform 1s ease-in-out
+    &:hover
+      transform: rotate(360deg)
+      filter: brightness(1) saturate(1.5)
+  &__content
+    p
+      margin: 0
+  &--comment
+    position: relative
+    padding-left: 35px
+    padding-top: 15px
+    font-style: italic
+    line-height: 1.2
+    &::before, &::after
+      color: $yellow2
+      font-size: 100px
+      display: inline-block
+      line-height: 1px
+    &::before
+      content: open-quote
+      position: absolute
+      left: -20px
+      top: 50px
+    &::after
+      content: close-quote
+      position: absolute
+      bottom: -20px
+  &--name
+    font-size: 1.5em
+    color: $black
+    @media screen and(max-width: 30rem)
+      font-size: 1.1em
+  &--job
+    text-transform: uppercase 
+    font-weight: bold
+    color: $black
+//END slide content
