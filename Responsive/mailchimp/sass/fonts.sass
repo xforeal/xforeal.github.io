@@ -1,0 +1,72 @@
+@import "colors"
+
+@font-face
+  font-family: 'Roboto-Light'
+  src: url('../fonts/Roboto-Light.eot')
+  src: local('../fonts/Roboto-Light'), url('../fonts/Roboto-Light.woff') format('woff'), url('../fonts/Roboto-Light.ttf') format('truetype'), url('../fonts/Roboto-Light.svg') format('svg')
+  font-weight: normal
+  font-style: normal
+$RL: Roboto-Light
+
+@font-face
+  font-family: 'Roboto-Bold'
+  src: url('../fonts/Roboto-Bold.eot')
+  src: local('../fonts/Roboto-Bold'), url('../fonts/Roboto-Bold.woff') format('woff'), url('../fonts/Roboto-Bold.ttf') format('truetype'), url('../fonts/Roboto-Bold.svg') format('svg')
+  font-weight: normal
+  font-style: normal
+$RB: Roboto-Bold
+
+// Fonts Mixin
+=font($font-weight, $font-size, $line-height, $font-family, $color)
+  $ff: '' + $font-family + ''
+  font: $font-weight $font-size + em / $line-height $ff
+  color: $color
+
+html
+  text-size-adjust: 100%
+  font-family: sans-serif
+  font-size: 16px
+
+body
+  font-family: sans-serif
+  font-smoothing: antialiased
+  +font(normal, 1, 1.25, Roboto-Light, $grey)
+
+p
+  line-height: 1.5
+
+.heading
+  color: $magenta
+  &--4
+    margin: 1em 0 0.5em
+    color: $black
+  &--2
+    font-family: $RB
+    font-size: 1.75em
+    padding: 0 0 0.8em 0
+    @media screen and(max-width: 480px)
+      font-size: 1.25em
+  &--1
+    font-family: $RB
+    font-size: 2.75em
+    margin-bottom: 0.5em
+    @media screen and(max-width: 480px)
+      font-size: 1.75em
+.link
+  &--main
+    display: inline-block
+    width: auto
+    padding: 1em 0 1px
+    color: $link  
+    font-weight: bold
+    &:hover
+      box-shadow: 0 1px 0 0 $link
+  &--login
+    font-weight: bold
+    color: $black
+
+.text-right
+  text-align: right
+  @media screen and(max-width: 760px)
+    text-align: left
+  

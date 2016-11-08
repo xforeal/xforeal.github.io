@@ -1,0 +1,279 @@
+@import "colors"
+@import "fonts"
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  appearance: none
+  outline: none
+  &::selection
+    background: $selection
+
+img
+  max-width: 100%
+
+a
+  color: inherit
+  text-decoration: none
+
+%clearfix
+  &::after
+    content: " "
+    clear: both
+    display: table
+
+// Sticky Footer
+body
+  display: flex
+  flex-direction: column
+  min-height: 100vh
+  
+.footer
+  flex: auto
+
+//BEGIN grid 12 cols: 1100 | 992 | 768
+$container-padding: 1em
+.container
+  @extend %clearfix
+  width: 100%
+  margin: auto
+  padding: 0 $container-padding
+  @media (min-width: 48rem) 
+    width: 46.875rem
+  @media (min-width: 62rem) 
+    width: 60.625rem
+  @media (min-width: 68.75rem) 
+    width: 65rem
+
+.row
+  @extend %clearfix
+  padding: $container-padding 0
+  overflow: hidden
+  margin: 0 -$container-padding
+  
+$col-gap: 2.25em  
+[class*="lg-"], [class*="md-"], [class*="sm"], [class*="xs"]
+  float: left
+  padding: 0 $col-gap / 2
+  
+$cols: 12
+@function col-width($col)
+  @return $col * 100% / $cols
+
+@for $i from 1 through $cols
+  .xs-#{$i}
+    width: col-width($i)
+  .xs-gap-#{$i}
+    margin-left: col-width($i)
+@media screen and(min-width: 30rem) // 30rem
+  @for $i from 1 through $cols
+    .sm-#{$i}
+      width: col-width($i)
+    .sm-gap-#{$i}
+      margin-left: col-width($i)
+@media screen and(min-width: 40rem) // 40rem
+  @for $i from 1 through $cols
+    .md-#{$i}
+      width: col-width($i)
+    .md-gap-#{$i}
+      margin-left: col-width($i)
+@media screen and(min-width: 48rem) // 48rem
+  @for $i from 1 through $cols
+    .xmd-#{$i}
+      width: col-width($i)
+    .xmd-gap-#{$i}
+      margin-left: col-width($i)
+@media screen and(min-width: 62rem) // 992px
+  @for $i from 1 through $cols
+    .lg-#{$i}
+      width: col-width($i)
+    .ld-gap-#{$i}
+      margin-left: col-width($i)
+@media screen and(min-width: 68.75rem) // 1100px
+  @for $i from 1 through $cols
+    .xlg-#{$i}
+      width: col-width($i)
+    .xlg-gap-#{$i}
+      margin-left: col-width($i)
+//END grid
+
+//BEGIN footer
+.footer
+  background: $footerBg
+  color: $footerColor
+  font-size: 0.9em
+  &__top
+    padding: 1.5em 0
+    border-top: 1px solid $border
+  &__bottom
+    padding: 1em 0
+    line-height: 1.25
+    text-align: center
+
+.menu__link
+  display: block
+  padding: 0.35em 0.65em 0.35em 0
+  cursor: pointer
+  color: $blue
+  font-weight: 400
+  &:hover
+    text-decoration: underline
+//END footer
+
+//BEGIN header
+.header
+  position: fixed
+  top: 0
+  left: 0
+  @extend %clearfix
+  width: 100%
+  line-height: $headerHeight 
+  @media screen and(max-width: 40rem)
+    line-height: 35px
+  box-shadow: 0 0 5px 1px #ccc
+  z-index: 100
+  background: $white
+//END header
+
+//BEGIN main-menu
+.main-menu
+  display: inline-block
+  margin: 0 auto
+  &__item
+    display: inline-block
+    text-align: left
+    white-space: nowrap
+    &:hover
+      background: $lightGrey
+    @media screen and(max-width: 48rem)
+      display: block
+  &__link
+    font-weight: bold
+    padding: 0 25px
+    line-height: 1
+    @media screen and(max-width: 61.25rem)
+      padding: 0 10px
+    @media screen and(max-width: 48rem)
+      padding: 0
+
+.nav
+  display: inline-block
+.nav--l
+  .main-menu__item
+    padding: 0 1em
+    text-align: center
+    @media screen and(max-width: 48rem)
+      padding-left: 0
+//END main-menu
+
+//BEGIN toggle
+.toggle
+  &--show, &--hide
+    font-weight: bold
+    cursor: pointer
+    display: none
+    margin-left: 1em
+    color: $blue
+    &::before
+      content: "|"
+      color: $black
+      padding-right: 10px
+@media screen and(max-width: 48rem)
+  .toggle
+    &--show, &--hide
+      display: inline-block
+  #toggle--menu
+    &:not(:target)
+      .toggle--show
+        display: none
+      .nav--r, .nav--l
+        display: block
+        padding-left: 5px
+    &:target
+      .toggle--hide, .nav--r, .nav--l
+        display: none
+//END toggle
+
+//BEGIN banner
+$banner-height: 500px
+$banner-height2: 700px
+.banner
+  margin: 50px 0 0
+  width: 100%
+  height: $banner-height
+  overflow: hidden
+  position: relative
+  display: flex
+  @media screen and(max-width: 40rem)
+    margin-top: -7em
+    height: $banner-height2
+  @media screen and(max-width: 30rem)
+    margin-top: -10em
+  @media screen and(max-width: 20rem)
+    margin-top: -7em
+  p
+    font-size: 1.2em
+    text-shadow: -1px -1px 1px $white
+  &__wrap
+    z-index: -10
+    width: $banner-height2
+    min-height: $banner-height
+    transform: translateX(-50%)
+  &__wrap, &__img
+    position: absolute
+    left: 0
+    top: 0
+    margin-left: 50%
+  &__img
+    background: url('../img/banner.jpg') no-repeat center
+    background-size: cover
+    width: 100%
+    height: $banner-height - 75px
+    transform: translateX(-30%) scale(1.2)
+    @media screen and(max-width: 40rem)
+      transform: translate(-30%, 65%)
+//END banner  
+
+.section
+  padding-bottom: 4em
+  @media screen and(max-width: 40rem)
+    padding-bottom: 2em
+
+//BEGIN button
+.btn
+  width: auto
+  display: inline-block
+  margin: 1em auto
+  cursor: pointer
+  line-height: 1
+  white-space: nowrap
+  text-align: center
+  &--1
+    margin-top: 2em
+    padding: 15px 25px
+    background: $btnBg linear-gradient(90deg, $btnBg, $btnBg2)
+    color: $white
+    border-radius: 4px
+    font-weight: bold
+    &:hover
+      background: $btnBg linear-gradient(90deg, $btnBg2, $btnBg)
+      // box-shadow: 0 0 1px 1px $btnBg2
+  &--header
+    @extend .btn--1
+    font-size: 0.8em
+    margin: 0
+    max-width: 110px
+    padding: 10px 15px
+    @media screen and(max-width: 760px)
+      display: block
+//END button
+
+.logo
+  min-height: 30px
+  max-width: 150px
+  width: 100%
+  &--header
+    max-width: 65px
+    transform: translateY(25%)
+
