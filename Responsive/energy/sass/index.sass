@@ -1,0 +1,516 @@
+$white: #fff
+$black: #000
+$lightRed: #e44939
+$item-hover-bg: orange
+$header-bg: $white
+$header-color: #000
+$footerBg: #ececec
+$footerBottomBg: #000
+$footerColor: #333
+$border: #b4b4b4
+$black: #000
+$menu-link-hover: #03a9f4
+$color1: #9c27b0
+$color2: #ff9800
+
+@font-face
+  font-family: 'Roboto-Light'
+  src: url('../fonts/Roboto-Light.eot')
+  src: local('../fonts/Roboto-Light'), url('../fonts/Roboto-Light.woff') format('woff'), url('../fonts/Roboto-Light.ttf') format('truetype'), url('../fonts/Roboto-Light.svg') format('svg')
+  font-weight: normal
+  font-style: normal
+$RL: Roboto-Light
+
+@font-face
+  font-family: 'Roboto-Bold'
+  src: url('../fonts/Roboto-Bold.eot')
+  src: local('../fonts/Roboto-Bold'), url('../fonts/Roboto-Bold.woff') format('woff'), url('../fonts/Roboto-Bold.ttf') format('truetype'), url('../fonts/Roboto-Bold.svg') format('svg')
+  font-weight: normal
+  font-style: normal
+$RB: Roboto-Bold
+
+//ICON
+[class^="icon-"]:before, [class*=" icon-"]:before
+  font-family: "fa-icon"
+  font-style: normal
+  font-weight: normal
+  speak: none
+  display: inline-block
+  text-decoration: inherit
+  width: 1em
+  margin-right: .2em
+  text-align: center
+  font-variant: normal
+  text-transform: none
+  line-height: 1em
+  margin-left: .2em
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  font-size: 3em
+  color: #7f7f7f
+
+@font-face
+  font-family: 'fa-icon'
+  src: url('../fonts/fa-icon.eot')
+  src: url('../fonts/fa-icon.eot') format('embedded-opentype'), url('../fonts/fa-icon.woff2') format('woff2'), url('../fonts/fa-icon.woff') format('woff'), url('../fonts/fa-icon.ttf') format('truetype'), url('../fonts/fa-icon.svg') format('svg')
+  font-weight: normal
+  font-style: normal
+
+.icon-calc
+  &:before
+    content: '\f1ec'
+
+.icon-building
+  &:before
+    content: '\f0f7'
+
+.icon-menu
+  &:before
+    content: '\f0c9'
+
+.icon-phone-2
+  &:before
+    content: '\e806'
+
+.icon-money
+  &:before
+    content: '\f0d6'
+
+.icon-phone-1
+  &:before
+    content: '\e803'
+.icon-key-1
+  &:before
+    content: '\e807'
+
+.icon-phone
+  &:before
+    content: '\e802'
+
+.icon-cancel
+  &:before
+    content: '\e805'
+
+.icon-credit-card
+  &:before
+    content: '\e800'
+
+.icon-key
+  &:before
+    content: '\e801'
+
+.icon-plus
+  &:before
+    content: '\e804'
+
+
+
+// Fonts Mixin
+=font($font-weight, $font-size, $line-height, $font-family, $color)
+  $ff: '' + $font-family + ''
+  font: $font-weight $font-size + em / $line-height $ff
+  color: $color
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  appearance: none
+  outline: none
+
+img
+  max-width: 100%
+
+a
+  color: inherit
+  text-decoration: none
+
+%flex-container
+  display: flex
+  align-items: stretch
+  justify-content: center
+  flex-wrap: wrap
+  flex-direction: row
+
+%clearfix
+  &::after
+    content: " "
+    clear: both
+    display: table
+
+html
+  text-size-adjust: 100%
+  text-rendering: optimizeLegibility
+  font-family: sans-serif
+  font-size: 16px
+
+body
+  font-family: sans-serif
+  font-smoothing: antialiased
+  display: flex
+  flex-direction: column
+  min-height: 100vh
+  font-family: $RL
+  
+.page-wrap
+  flex: 1 0 auto
+  
+//BEGIN grid 12 cols: 1200 | 992 | 768
+$container-padding: 1em
+.container
+  @extend %clearfix
+  width: 100%
+  margin: auto
+  padding: 0 $container-padding
+  @media (min-width: 48rem) 
+    width: 46.875rem
+  @media (min-width: 62rem) 
+    width: 60.625rem
+  @media (min-width: 75rem) 
+    width: 73.125rem
+
+.row
+  @extend %clearfix
+  padding: $container-padding 0
+  overflow: hidden
+  margin: 0 -$container-padding
+  
+$col-gap: 1.5em  
+[class*="lg-"], [class*="md-"], [class*="sm"], [class*="xs"]
+  float: left
+  padding: 0 $col-gap / 2
+  
+$cols: 12
+@function col-width($col)
+  @return $col * 100% / $cols
+
+@for $i from 1 through $cols
+  .xs-#{$i}
+    width: col-width($i)
+  .xs-gap-#{$i}
+    margin-left: col-width($i)
+@media screen and(min-width: 30rem) // 480px
+  @for $i from 1 through $cols
+    .sm-#{$i}
+      width: col-width($i)
+    .sm-gap-#{$i}
+      margin-left: col-width($i)
+@media screen and(min-width: 40rem) // 640px
+  @for $i from 1 through $cols
+    .md-#{$i}
+      width: col-width($i)
+    .md-gap-#{$i}
+      margin-left: col-width($i)
+@media screen and(min-width: 48rem) // 768px
+  @for $i from 1 through $cols
+    .xmd-#{$i}
+      width: col-width($i)
+    .xmd-gap-#{$i}
+      margin-left: col-width($i)
+@media screen and(min-width: 62rem) // 992px
+  @for $i from 1 through $cols
+    .lg-#{$i}
+      width: col-width($i)
+    .ld-gap-#{$i}
+      margin-left: col-width($i)
+@media screen and(min-width: 75rem) // 1200px
+  @for $i from 1 through $cols
+    .xlg-#{$i}
+      width: col-width($i)
+    .xlg-gap-#{$i}
+      margin-left: col-width($i)
+//END grid
+
+//BEGIN footer
+.footer
+  background: $footerBg
+  color: $footerColor
+  font-size: 0.9em
+  .heading
+    color: $black
+    margin: 1em 0 0.5em
+    font-weight: 300
+    &--4:first-of-type
+      border-bottom: 1px solid $border
+      padding-bottom: 0.7em
+      margin-bottom: 1em
+      display: inline-block
+    &--5
+      font-size: 1em
+  &__top
+    padding: 1.5em 0
+  &__bottom
+    padding: 1em 0
+    background: $footerBottomBg 
+    color: $border
+    line-height: 1.25
+    p
+      padding-top: 0.7em
+    a:hover
+      color: $menu-link-hover
+
+.menu__link
+  display: block
+  white-space: nowrap
+  padding: 0.35em 0.65em 0.35em 0
+  cursor: pointer
+  &:hover
+    color: $menu-link-hover
+
+.link
+  &--1
+    color: $white
+  &--2:not(:last-of-type)::after
+    content: " / "
+    color: $white
+
+.text-uppercase
+  text-transform: uppercase
+.collapse
+  &--1
+    margin-top: 0 !important
+//END footer
+
+//BEGIN nav menu
+$header-height: 50px
+$nav-item-width: 120px
+$nav-item-height: 40px
+$nav-item-pdlr: 15px
+
+.header
+  @extend %clearfix
+  // height: $header-height
+  // line-height: $header-height
+  background: $header-bg
+  color: $header-color
+  width: 100%
+  &--bottom
+    padding: 10px 0
+  
+.toggle--hide,
+.toggle--show 
+  display: none
+  margin-left: 1em
+  color: $lightRed
+@media screen and(max-width: 998px)
+  .toggle--hide,
+  .toggle--show 
+    display: inline-block
+    
+  #nav-toggle:target
+    height: auto
+    overflow: hidden  
+    .toggle--show
+      display: none
+    .toggle--hide
+      display: inline-block
+  #nav-toggle:not(:target)
+    height: $header-height
+    overflow: hidden  
+    .toggle--show
+      display: inline-block
+    .toggle--hide
+      display: none
+  
+.nav
+  float: right
+  padding-top: 10px
+  //font-size: 0
+  @media screen and(max-width: 998px)
+    clear: both
+    display: block
+    width: 100%
+  & &
+    z-index: 10
+    position: absolute
+    display: none
+    & .nav
+      left: 100% 
+      top: 0
+    @media screen and(max-width: 998px)
+      position: relative
+      & .nav
+        left: 0
+.nav__link
+  font-size: 16px
+  display: block
+  padding: 5px $nav-item-pdlr
+  &:hover
+    box-shadow: inset 0 -2px 0 0 red
+.nav__item
+  list-style-type: none
+  display: inline-block
+  position: relative
+  background: $header-bg
+  color: $header-color
+  &:hover > .nav
+    display: block
+  & &
+    display: block
+    width: $nav-item-width
+    background: rgba($header-bg, 0.9)
+    &:hover
+      background: $lightRed
+      color: $white
+  @media screen and(max-width: 998px)
+    display: block
+    width: 100%
+    text-align: left
+    & &
+      width: 100%
+//END nav menu
+
+.flex__container
+  @extend %flex-container
+
+.flex__item
+  flex: 1 0 auto
+  flex-basis: 25%
+  min-width: 250px
+  position: relative
+  img
+    display: block
+  &-overlay
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    color: $white
+    background: rgba(0,0,0,0.2)
+    &:hover
+      background: rgba(red, 0.5)
+  .heading
+    color: $white
+    margin-top: 35%
+    transform: translateY(-50%)
+
+.figure
+  flex: 1 0 auto
+  flex-basis: 22.5%
+  min-width: 250px
+  margin: 10px
+  padding: 10px
+  background: $white
+  text-align: left
+  position: relative
+  &:hover
+    .figure__overlay
+      display: block
+  &__overlay
+    display: none
+    position: absolute
+    top: 10px
+    left: 10px
+    width: calc(100% - 2*10px)
+    height: calc(100% - 2*10px)
+    background: rgba($black,0.8)
+    color: $white
+    h3
+      margin-top: 50%
+      transform: translateY(-50%)
+
+.section
+  padding: 2em 10px
+  // margin: 1.5em 0
+  text-align: center
+  &--newz
+    background: #eaeaea
+    text-align: center
+
+.heading
+  text-align: center
+  &--2
+    display: inline-block
+    width: 0 auto
+    margin: 0 auto 2em
+    border-bottom: 4px dotted red
+    padding-bottom: 3px
+  &--3
+    margin: 1em 0
+  &--1
+    font-family: $RB, Helvetica, sans-serif
+    font-weight: 300
+    @media screen and(max-width: 360px)
+      font-size: 1.3em
+
+.box
+  margin: 1em 0
+  &:hover
+    .heading
+      color: red
+    [class^="icon-"]::before, [class*=" icon-"]::before
+      transform: scale(1.2)
+      color: red
+
+//BEGIN banner
+$banner-height: 500px
+
+.banner
+  padding-top: 60px
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 100%
+  height: $banner-height
+  overflow: hidden
+  background: #ccc
+  z-index: -1
+  &__caption
+    position: absolute
+    color: $white
+    text-align: center
+    z-index: 2
+  &__bg, &__gradient
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    min-height: $banner-height
+  &__bg
+    background: $color1 url(../img/banner.jpg) no-repeat 0 0
+    background-size: cover
+    background-attachment: fixed
+    object-fit: cover
+    z-index: 0
+  &__gradient
+    opacity: 0.5
+    background-image: linear-gradient(135deg, $color1 10%, transparent, $color2 90%)
+    z-index: 1
+//END banner
+
+.btn  
+  display: inline-block
+  cursor: pointer
+  margin: 1em 0
+  &--cta
+    padding: 15px 20px
+    margin-top: 2em
+    text-transform: uppercase
+    color: $white
+    background: $lightRed
+    border-radius: 6px
+    &:hover
+      background: $white
+      color: $lightRed
+
+.info-block
+  background: rgba($white, 0.8)
+  color: #000
+  margin: 2em auto 10px  
+  padding: 20px
+  flex-basis: 30%
+  min-width: 250px
+  font-family: $RL
+  font-weight: 600
+  font-size: 1.1em
+  @media screen and(max-width: 640px)
+    margin-top: 10px
+ 
+  &:hover
+    background: $white
+  &:first-child
+    text-transform: uppercase
+  &:nth-child(2)
+    padding-top: 30px
