@@ -1,17 +1,18 @@
 $white: #fff
 $black: #000
 $lightRed: #e44939
-$item-hover-bg: orange
 $header-bg: $white
-$header-color: #000
-$footerBg: #ececec
-$footerBottomBg: #000
-$footerColor: #333
+$header-color: $black
+$footerBg: #92a5af
+$footerBottomBg: #849ca8
+$footerColor: #fff
 $border: #b4b4b4
-$black: #000
 $menu-link-hover: #03a9f4
-$color1: #9c27b0
-$color2: #ff9800
+$gradient-color1: #9c27b0
+$gradient-color2: #ff9800
+$grey: #666
+$lightGrey: #eaeaea
+$lightGrey2: #a19e9e
 
 @font-face
   font-family: 'Roboto-Light'
@@ -103,7 +104,9 @@ $RB: Roboto-Bold
   &:before
     content: '\e804'
 
-
+.icon-mail
+  &:before
+    content: '\f0e0'
 
 // Fonts Mixin
 =font($font-weight, $font-size, $line-height, $font-family, $color)
@@ -227,9 +230,9 @@ $cols: 12
   color: $footerColor
   font-size: 0.9em
   .heading
-    color: $black
+    color: $footerColor
     margin: 1em 0 0.5em
-    font-weight: 300
+    font-weight: 600
     &--4:first-of-type
       border-bottom: 1px solid $border
       padding-bottom: 0.7em
@@ -242,7 +245,7 @@ $cols: 12
   &__bottom
     padding: 1em 0
     background: $footerBottomBg 
-    color: $border
+    color: $footerColor
     line-height: 1.25
     p
       padding-top: 0.7em
@@ -255,7 +258,7 @@ $cols: 12
   padding: 0.35em 0.65em 0.35em 0
   cursor: pointer
   &:hover
-    color: $menu-link-hover
+    color: $lightRed
 
 .link
   &--1
@@ -263,6 +266,23 @@ $cols: 12
   &--2:not(:last-of-type)::after
     content: " / "
     color: $white
+  &--phone
+    margin-right: 1em
+    color: $lightGrey2
+    &::before
+      content: "\e803"
+      font-family: 'fa-icon'
+      margin-right: 10px
+    &:hover::before
+      color: red
+  &--mail
+    color: $lightGrey2
+    &::before
+      content: "\f0e0"
+      font-family: 'fa-icon'
+      margin-right: 10px
+    &:hover::before
+      color: red
 
 .text-uppercase
   text-transform: uppercase
@@ -273,7 +293,7 @@ $cols: 12
 
 //BEGIN nav menu
 $header-height: 50px
-$nav-item-width: 120px
+$nav-item-width: 200px
 $nav-item-height: 40px
 $nav-item-pdlr: 15px
 
@@ -284,6 +304,11 @@ $nav-item-pdlr: 15px
   background: $header-bg
   color: $header-color
   width: 100%
+  &--top
+    padding: 10px 0 10px 50px
+    border-bottom: 1px solid $lightGrey
+    @media screen and (max-width: 30rem)
+      padding-left: 10px
   &--bottom
     padding: 10px 0
   
@@ -292,7 +317,8 @@ $nav-item-pdlr: 15px
   display: none
   margin-left: 1em
   color: $lightRed
-@media screen and(max-width: 998px)
+  font-weight: bold
+@media screen and(max-width: 62.375rem)
   .toggle--hide,
   .toggle--show 
     display: inline-block
@@ -316,7 +342,7 @@ $nav-item-pdlr: 15px
   float: right
   padding-top: 10px
   //font-size: 0
-  @media screen and(max-width: 998px)
+  @media screen and(max-width: 62.375rem)
     clear: both
     display: block
     width: 100%
@@ -327,7 +353,7 @@ $nav-item-pdlr: 15px
     & .nav
       left: 100% 
       top: 0
-    @media screen and(max-width: 998px)
+    @media screen and(max-width: 62.375rem)
       position: relative
       & .nav
         left: 0
@@ -337,6 +363,15 @@ $nav-item-pdlr: 15px
   padding: 5px $nav-item-pdlr
   &:hover
     box-shadow: inset 0 -2px 0 0 red
+  &--parent
+    position: relative
+    &::after
+      content: "\25be"
+      position: absolute
+      top: -2px
+      color: $grey
+      font-size: 1.5em
+
 .nav__item
   list-style-type: none
   display: inline-block
@@ -352,12 +387,16 @@ $nav-item-pdlr: 15px
     &:hover
       background: $lightRed
       color: $white
-  @media screen and(max-width: 998px)
+  @media screen and(max-width: 62.375rem)
     display: block
     width: 100%
     text-align: left
     & &
       width: 100%
+
+.logo
+  @media screen and(max-width: 20rem)
+    display: none
 //END nav menu
 
 .flex__container
@@ -415,8 +454,10 @@ $nav-item-pdlr: 15px
   // margin: 1.5em 0
   text-align: center
   &--newz
-    background: #eaeaea
+    background: $lightGrey
     text-align: center
+  &--support
+    background: $lightGrey
 
 .heading
   text-align: center
@@ -431,7 +472,7 @@ $nav-item-pdlr: 15px
   &--1
     font-family: $RB, Helvetica, sans-serif
     font-weight: 300
-    @media screen and(max-width: 360px)
+    @media screen and(max-width: 30rem)
       font-size: 1.3em
 
 .box
@@ -444,10 +485,10 @@ $nav-item-pdlr: 15px
       color: red
 
 //BEGIN banner
-$banner-height: 500px
+$banner-height: 31.25rem
 
 .banner
-  padding-top: 60px
+  padding-top: 40px
   position: relative
   display: flex
   align-items: center
@@ -455,7 +496,7 @@ $banner-height: 500px
   width: 100%
   height: $banner-height
   overflow: hidden
-  background: #ccc
+  background: $lightGrey
   z-index: -1
   &__caption
     position: absolute
@@ -469,14 +510,14 @@ $banner-height: 500px
     width: 100%
     min-height: $banner-height
   &__bg
-    background: $color1 url(../img/banner.jpg) no-repeat 0 0
+    background: $gradient-color1 url(../img/banner.jpg) no-repeat 0 0
     background-size: cover
     background-attachment: fixed
     object-fit: cover
     z-index: 0
   &__gradient
     opacity: 0.5
-    background-image: linear-gradient(135deg, $color1 10%, transparent, $color2 90%)
+    background-image: linear-gradient(135deg, $gradient-color1 10%, transparent, $gradient-color2 90%)
     z-index: 1
 //END banner
 
@@ -494,10 +535,12 @@ $banner-height: 500px
     &:hover
       background: $white
       color: $lightRed
+    @media screen and(max-width: 30rem)
+      margin-top: 1em
 
 .info-block
   background: rgba($white, 0.8)
-  color: #000
+  color: $black
   margin: 2em auto 10px  
   padding: 20px
   flex-basis: 30%
@@ -505,12 +548,13 @@ $banner-height: 500px
   font-family: $RL
   font-weight: 600
   font-size: 1.1em
-  @media screen and(max-width: 640px)
+  @media screen and(max-width: 40rem)
     margin-top: 10px
- 
   &:hover
     background: $white
   &:first-child
     text-transform: uppercase
   &:nth-child(2)
     padding-top: 30px
+
+
