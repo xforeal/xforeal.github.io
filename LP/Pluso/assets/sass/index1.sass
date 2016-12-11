@@ -1,0 +1,148 @@
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  appearance: none
+  outline: none
+
+img
+  max-width: 100%
+
+a
+  color: inherit
+  text-decoration: none
+
+%clearfix
+  &::after
+    content: " "
+    clear: both
+    display: table
+
+html
+  text-size-adjust: 100%
+  text-rendering: optimizeLegibility
+  text-overflow: ellipsis
+  font-variant: normal
+  font-family: sans-serif
+  font-size: 16px
+
+body
+  font-family: sans-serif
+  font-smoothing: antialiased
+  display: flex
+  flex-direction: column
+  min-height: 100vh
+  
+.page-wrap
+  flex: 1 0 auto
+  
+//BEGIN grid 12 cols: 1200 | 992 | 768
+$container-padding: 1em
+$col-sm: 30rem // 480px
+$col-md: 40rem // 640px
+$col-xmd: 48rem // 768px
+$col-lg: 62rem // 992px
+$col-xlg: 75rem // 1200px
+
+.container
+  @extend %clearfix
+  width: 100%
+  margin: auto
+  padding: 0 $container-padding
+  @media (min-width: 48rem) 
+    width: 46.875rem
+  @media (min-width: 62rem) 
+    width: 60.625rem
+  @media (min-width: 75rem) 
+    width: 73.125rem
+
+.row
+  @extend %clearfix
+  padding: $container-padding 0
+  margin: 0 -$container-padding
+  
+$col-gap: 1.5em  
+[class*="lg-"], [class*="md-"], [class*="sm"], [class*="xs"]
+  float: left
+  padding: 0 $col-gap / 2
+  
+$cols: 12
+@function col-width($col)
+  @return $col * 100% / $cols
+
+.xs-hide
+  display: none
+.xs-visible
+  display: visible
+.xs-pull-right
+  float: right
+  
+@for $i from 1 through $cols
+  .xs-#{$i}
+    width: col-width($i)
+  .xs-gap-#{$i}
+    margin-left: col-width($i)
+  
+ 
+@media screen and(min-width: $col-sm)
+  .sm-hide
+    display: none
+  .sm-visible
+    display: block
+  .sm-pull-right
+    float: right
+  @for $i from 1 through $cols
+    .sm-#{$i}
+      width: col-width($i)
+    .sm-gap-#{$i}
+      margin-left: col-width($i)
+@media screen and(min-width: $col-md)
+  .md-hide
+    display: none
+  .md-visible
+    display: block
+  .md-pull-right
+    float: right
+  .md-pull-left
+    float: left
+  @for $i from 1 through $cols
+    .md-#{$i}
+      width: col-width($i)
+    .md-gap-#{$i}
+      margin-left: col-width($i)
+@media screen and(min-width: $col-xmd) 
+  .xmd-hide
+    display: none
+  .xmd-visible
+    display: block
+  .xmd-pull-right
+    float: right
+  @for $i from 1 through $cols
+    .xmd-#{$i}
+      width: col-width($i)
+    .xmd-gap-#{$i}
+      margin-left: col-width($i)
+@media screen and(min-width: $col-lg) 
+  .lg-pull-right
+    float: right
+  .lg-visible
+    display: block
+  @for $i from 1 through $cols
+    .lg-#{$i}
+      width: col-width($i)
+    .ld-gap-#{$i}
+      margin-left: col-width($i)
+@media screen and(min-width: $col-xlg) 
+  .xlg-hide
+    display: none
+  .xlg-visible
+    display: block
+  .xlg-pull-right
+    float: right
+  @for $i from 1 through $cols
+    .xlg-#{$i}
+      width: col-width($i)
+    .xlg-gap-#{$i}
+      margin-left: col-width($i)
+
+//END grid
