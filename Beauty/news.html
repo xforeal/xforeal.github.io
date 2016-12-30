@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<meta name="description" content="">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="libs/bootstrap/bootstrap-grid-3.3.1.min.css">
+	<link rel="stylesheet" href="libs/fancybox/jquery.fancybox.css">
+	<link rel="stylesheet" href="libs/air-datepicker-master/dist/css/datepicker.min.css">
+	<link rel="stylesheet" href="libs/jquery.bxslider/jquery.bxslider.css">
+	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/media.css">
+</head>
+<body>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="main container clearfix">
+            <header class="clearfix">
+               <div class="header-top-block clearfix col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="log-btn">
+                    <div class="log-out-btn">
+                        <a href="#auth-window" class="enter-btn fancybox">Войти</a>&nbsp;&nbsp;/&nbsp;
+                        <a href="#reg-window-1" class="make-diary-btn fancybox">Зaвести дневник</a>
+                    </div>
+                    <div class="log-in-btn">
+                        <a href="#" class="exit-btn">Выход</a>&nbsp;&nbsp;/&nbsp;
+                        <a href="#" class="profile-btn">Мой профиль</a>
+                    </div>
+                </div>
+                <div class="soc-btn">
+                    <a href="#" class="soc soc-btn-f"></a>
+                    <a href="#" class="soc soc-btn-vk"></a>
+                    <a href="#" class="soc soc-btn-insta"></a>
+                    <input type="text" class="search-input">
+                    <a href="#" class="search-btn"></a>
+                </div>
+                </div>
+                <div class="logo-top col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <img src="img/logo-top.png" alt="">
+                </div>
+            </header>
+
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="#" class="active">Новости</a></li>
+                    <li><a href="#">Коллекции</a></li>
+                    <li><a href="#">Дневники</a></li>
+                    <li><a href="#">Бренды</a></li>
+                    <li><a href="#">Лайфхаки</a></li>
+                    <li><a href="#">Свотчи</a></li>
+                    <li><a href="#">Интервью</a></li>
+                </ul>
+            </nav>
+
+            <section class="content col-lg-9 col-md-9 col-sm-8 col-xs-8">
+                <p class="news-main-title">Пион, розовый нектар, ваниль, жасмин и древесные аккорды под стать изысканным кутюрным платьям</p>
+                <div class="news-bottom">
+                        <div class="views">91</div>
+                        <div class="comments">3</div>
+                </div>
+                <div class="news-main-pic"><img src="img/news-main-pic.jpg" alt=""></div>
+                <div class="news-main-descr">
+                    <p>
+                        Цветы — неисчерпаемый источник вдохновения для Эли Сааба. Его кутюрные платья со множеством воланов и рюшей — прямые аллюзии на самые пышные бутоны. Новый аромат Rose Couture наследует этот мотив и раскрывает тему царственного цветка во всех подробностях.
+                    </p>
+                    <p>
+                        Парфюмерных дел мастер Франсис Куркджян взял за основу классическую композицию Elie Saab Le Parfum с яркими аккордами флердоранжа и лепестков медовой розы, дополнил ее пудровыми аккордами пиона и ванили, отголосками фруктов и жасминовой дымкой. Главная героиня роза расцвела в самом сердце аромата. А древесные аккорды сандала и пачулей украсили его шлейф. Он, подобно шлейфу платья, заполняет пространство при легком дуновении ветра. Аромат Elie Saab Rose Couture заключен в граненый флакон знакомой формы и доступен в двух вариантах объема — 30 и 50 мл по цене 3700 и 5100 рублей соответственно.
+                    </p>
+                </div>
+                <div class="source clearfix">
+                    <p class="author">Автор статьи: <span>Anastasia</span></p>
+                    <p class="add-source"><a href="#">Добавить источник</a></p>
+                </div>
+                <div class="news-main-comments clearfix">
+                    <p class="comments-title">Комментарии</p>
+                    <p class="comments-share">
+                        <span>Поделиться с друзьями</span>
+                            <a href="#" class="com-share share-btn-f"></a>
+                            <a href="#" class="com-share share-btn-vk"></a>
+                            <a href="#" class="com-share share-btn-insta"></a>
+                    </p>
+                    <div class="comments-area clearfix">
+                        <div class="comment-author"><img src="img/author-photo.png" alt=""></div>
+                        <div class="comment-wrap">
+                            <textarea placeholder="Добавить комментарий..."></textarea>
+                        </div>
+                        <div style="clear: both;"></div>
+                        <div class="add-review-btn-green"><a href="#">ОТПРАВИТЬ</a></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="blogs col-lg-3 col-md-3 col-sm-4 col-xs-4">
+               <!-- 
+                               <div class="best-diaries">
+                                   <p class="blogs-title"><span>Лучшие</span> дневники</p>
+                                   <div class="diary-item">
+                                       <div class="diary-img">
+                                           <img src="img/author-photo.png" alt="">
+                                       </div>
+                                       <div class="diary-data">
+                                           <div class="author-name"><a href="#">Anastasia</a></div>
+                                           <div class="author-rating">Рейтинг 1560 баллов</div>
+                                       </div>
+                                   </div>
+                                   <div class="diary-item">
+                                       <div class="diary-img">
+                                           <img src="img/author-photo.png" alt="">
+                                       </div>
+                                       <div class="diary-data">
+                                           <div class="author-name"><a href="#">Anastasia</a></div>
+                                           <div class="author-rating">Рейтинг 1560 баллов</div>
+                                       </div>
+                                   </div>
+                                   <div class="diary-item">
+                                       <div class="diary-img">
+                                           <img src="img/author-photo.png" alt="">
+                                       </div>
+                                       <div class="diary-data">
+                                           <div class="author-name"><a href="#">Anastasia</a></div>
+                                           <div class="author-rating">Рейтинг 1560 баллов</div>
+                                       </div>
+                                   </div>
+                                   <div class="diary-item">
+                                       <div class="diary-img">
+                                           <img src="img/author-photo.png" alt="">
+                                       </div>
+                                       <div class="diary-data">
+                                           <div class="author-name"><a href="#">Anastasia</a></div>
+                                           <div class="author-rating">Рейтинг 1560 баллов</div>
+                                       </div>
+                                   </div>
+               
+                                   <p class="blogs-title"><span>Лучшие</span> товары</p>
+                                       <div class="goods-item">
+                                           <div class="goods-img">
+                                               <img src="img/goods-photo.png" alt="">
+                                           </div>
+                                           <div class="goods-data">
+                                               <div class="goods-name"><a href="#">Future Solution LX Total Radiance Foundation</a></div>
+                                               <div class="goods-comments">156</div>
+                                           </div>
+                                       </div>
+                                       <div class="goods-item">
+                                           <div class="goods-img">
+                                               <img src="img/goods-photo.png" alt="">
+                                           </div>
+                                           <div class="goods-data">
+                                               <div class="goods-name"><a href="#">Future Solution LX Total Radiance Foundation</a></div>
+                                               <div class="goods-comments">156</div>
+                                           </div>
+                                       </div>
+                                       <div class="goods-item">
+                                           <div class="goods-img">
+                                               <img src="img/goods-photo.png" alt="">
+                                           </div>
+                                           <div class="goods-data">
+                                               <div class="goods-name"><a href="#">Future Solution LX Total Radiance Foundation</a></div>
+                                               <div class="goods-comments">156</div>
+                                           </div>
+                                       </div>
+                                       <div class="goods-item">
+                                           <div class="goods-img">
+                                               <img src="img/goods-photo.png" alt="">
+                                           </div>
+                                           <div class="goods-data">
+                                               <div class="goods-name"><a href="#">Future Solution LX Total Radiance Foundation</a></div>
+                                               <div class="goods-comments">156</div>
+                                           </div>
+                                       </div>
+                                       <div class="goods-item">
+                                           <div class="goods-img">
+                                               <img src="img/goods-photo.png" alt="">
+                                           </div>
+                                           <div class="goods-data">
+                                               <div class="goods-name"><a href="#">Future Solution LX Total Radiance Foundation</a></div>
+                                               <div class="goods-comments">156</div>
+                                           </div>
+                                       </div>
+                                       <div class="goods-item">
+                                           <div class="goods-img">
+                                               <img src="img/goods-photo.png" alt="">
+                                           </div>
+                                           <div class="goods-data">
+                                               <div class="goods-name"><a href="#">Future Solution LX Total Radiance Foundation</a></div>
+                                               <div class="goods-comments">156</div>
+                                           </div>
+                                       </div>
+                                       <div class="goods-item">
+                                           <div class="goods-img">
+                                               <img src="img/goods-photo.png" alt="">
+                                           </div>
+                                           <div class="goods-data">
+                                               <div class="goods-name"><a href="#">Future Solution LX Total Radiance Foundation</a></div>
+                                               <div class="goods-comments">156</div>
+                                           </div>
+                                       </div>
+                               </div>
+               
+                               <p class="title-black">СЕЙЧАС ОБСУЖДАЮТ</p>
+                               <div class="posts">
+                                   <div class="post-item">
+                                       <p class="post-name">
+                                           <a href="#">YSL Gloss Volupté Extreme Shine Soft & Light Texture # 4 Fuchsia Vermeil 3 </a>
+                                           <span class="post-author">KatrinVesna</span>
+                                       </p>
+                                   </div>
+                                   <div class="post-item">
+                                       <p class="post-name">
+                                           <a href="#">YSL Gloss Volupté Extreme Shine Soft & Light Texture # 4 Fuchsia Vermeil 3 </a>
+                                           <span class="post-author">KatrinVesna</span>
+                                       </p>
+                                   </div>
+                                   <div class="post-item">
+                                       <p class="post-name">
+                                           <a href="#">YSL Gloss Volupté Extreme Shine Soft & Light Texture # 4 Fuchsia Vermeil 3 </a>
+                                           <span class="post-author">KatrinVesna</span>
+                                       </p>
+                                   </div>
+                                   <div class="post-item">
+                                       <p class="post-name">
+                                           <a href="#">YSL Gloss Volupté Extreme Shine Soft & Light Texture # 4 Fuchsia Vermeil 3 </a>
+                                           <span class="post-author">KatrinVesna</span>
+                                       </p>
+                                   </div>
+                                   <div class="post-item">
+                                       <p class="post-name">
+                                           <a href="#">YSL Gloss Volupté Extreme Shine Soft & Light Texture # 4 Fuchsia Vermeil 3 </a>
+                                           <span class="post-author">KatrinVesna</span>
+                                       </p>
+                                   </div>
+                               </div>
+               
+                               <p class="all-posts"><a href="#">Все посты</a></p>
+                                -->
+                    <div class="banner">
+                        <img src="https://placehold.it/240x400" width="100%" alt="">
+                    </div>
+                    
+                    <div class="banner">
+                        <img src="https://placehold.it/240x400" width="100%" alt="">
+                    </div>
+            </section>
+        </div>
+        <footer class="main-footer clearfix">
+            <div class="container">
+                <div class="left">
+                    <p class="footer-logo">BeautyDayBook<br>
+                        <span>2015 все права защищены</span>
+                    </p>
+                    <p><a href="#">О нас</a></p>
+                    <p><a href="#">Контакты</a></p>
+                    <p><a href="#">Информация</a></p>
+                    <p><a href="#">Реклама</a></p>
+                </div>
+                <div class="right">
+                    <div class="soc-btn">
+                        <a href="#" class="soc soc-btn-f"></a>
+                        <a href="#" class="soc soc-btn-vk"></a>
+                        <a href="#" class="soc soc-btn-insta"></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+<!--Авторизация-->
+
+<div id="auth-window" class="modal-window">
+    <p class="modal-title">Вход</p>
+    <form action="" method="get">
+        <div class="input-wrap">
+            <label for="input-login">Логин</label>
+            <input type="text" id="input-login">
+        </div>
+        <div class="input-wrap">
+            <label for="input-pass">Пароль</label>
+            <input type="password" id="input-pass">
+        </div>
+        <div class="input-wrap">
+            <button type="submit" value="ВОЙТИ" class="enter">ВОЙТИ</button>
+            <a href="#new-pass-window" class="forgot-pass fancybox">Забыли пароль?</a>
+        </div>
+    </form>
+</div>
+<!--Авторизация (восстановление пароля)-->
+<div id="new-pass-window" class="modal-window">
+    <p class="modal-title">Вход</p>
+    <form action="" method="get">
+        <div class="input-wrap">
+            <label for="input-mail">Введите почту</label>
+            <input type="text" id="input-mail">
+        </div>
+        <div class="input-wrap">
+            <a href="#letter-window" class="next-step fancybox">ДАЛЕЕ</a>
+        </div>
+    </form>
+</div>
+<!--Авторизация (отправление письма с паролем)-->
+<div id="letter-window" class="modal-window">
+    <p class="modal-text">На вашу страницу было отправлено письмо с восстановлением пароля</p>
+    <div class="input-wrap">
+        <a href="#" class="next-step close-modal">OK</a>
+    </div>
+</div>
+
+<!-- Регистрация шаг 1 -->
+
+<div id="reg-window-1" class="modal-window">
+    <div class="modal-title-2">
+        <span class="reg-steps">Шаг 1 из 3</span>
+        <span class="reg-diary">Заведи свой<br><span class="pink">beauty-дневник</span></span>
+    </div>
+    <form action="" method="get">
+        <div class="input-wrap">
+            <label for="input-login">Логин</label>
+            <input type="text" id="input-login">
+        </div>
+        <div class="input-wrap">
+            <label for="input-pass">Пароль</label>
+            <input type="password" id="input-pass">
+        </div>
+        <div class="input-wrap">
+            <label for="input-mail">E-mail</label>
+            <input type="text" id="input-mail">
+        </div>
+        <div class="input-wrap wrap-logo">
+            <a href="#reg-window-2" class="next-step reg fancybox">ДАЛЕЕ</a>
+            <img class="modal-bottom-logo" src="img/logo-top.png">
+        </div>
+    </form>
+</div>
+<!-- Регистрация шаг 2 -->
+<div id="reg-window-2" class="modal-window">
+    <div class="modal-title-2">
+        <span class="reg-steps">Шаг 2 из 3</span>
+        <span class="reg-diary">Заведи свой<br><span class="pink">beauty-дневник</span></span>
+    </div>
+    <form action="" method="get">
+        <div class="input-wrap">
+            <label for="input-birth">Дата рождения</label>
+            <input type="text" id="input-birth" class="datepicker-here">
+        </div>
+        <div class="input-wrap">
+            <label for="input-city">Город</label>
+            <input type="text" id="input-city">
+        </div>
+        <div class="input-wrap">
+            <label for="input-country">Страна</label>
+            <input type="text" id="input-country">
+        </div>
+        <div class="input-wrap wrap-logo">
+            <a href="#reg-window-3" class="next-step reg fancybox">ДАЛЕЕ</a>
+            <img class="modal-bottom-logo" src="img/logo-top.png">
+        </div>
+    </form>
+</div>
+<!-- Регистрация шаг 3 -->
+<div id="reg-window-3" class="modal-window">
+    <div class="modal-title-2">
+        <span class="reg-steps">Шаг 3 из 3</span>
+        <span class="reg-info">Эта информация поможет нам рекомендовать правильные продукты для Вас</span>
+    </div>
+    <form action="" method="get">
+        <div class="input-wrap">
+            <label for="input-skin">Тип кожи</label>
+            <select type="text" id="input-skin">
+                <option value="">option</option>
+                <option value="">option</option>
+                <option value="">option</option>
+                <option value="">option</option>
+            </select>
+        </div>
+        <div class="input-wrap">
+            <label for="input-hair">Тип волос</label>
+            <select type="text" id="input-hair">
+                <option value="">option</option>
+                <option value="">option</option>
+                <option value="">option</option>
+                <option value="">option</option>
+            </select>
+        </div>
+        <div class="input-wrap">
+            <label for="input-hair-col">Цвет волос</label>
+            <select type="text" id="input-hair-col">
+                <option value="">option</option>
+                <option value="">option</option>
+                <option value="">option</option>
+                <option value="">option</option>
+            </select>
+        </div>
+        <div class="input-wrap">
+            <label for="input-hair-col">Цвет глаз</label>
+            <select type="text" id="input-hair-col">
+                <option value="">option</option>
+                <option value="">option</option>
+                <option value="">option</option>
+                <option value="">option</option>
+            </select>
+        </div>
+        <div class="input-wrap wrap-logo">
+            <a href="#reg-window-4" class="next-step reg fancybox">ДАЛЕЕ</a>
+            <img class="modal-bottom-logo" src="img/logo-top.png">
+        </div>
+    </form>
+</div>
+<!-- Регистрация завершение -->
+<div id="reg-window-4" class="modal-window">
+    <div class="modal-title">
+        Регистрация прошла успешно!<br>Добро пожаловать!
+    </div>
+    <div class="reg-win-footer"><img src="img/logo-top.png" alt=""></div>
+</div>
+
+	<script src="libs/jquery/jquery-1.11.1.min.js"></script>
+	<script src="libs/jquery.bxslider/jquery.bxslider.min.js"></script>
+    <script src="libs/air-datepicker-master/dist/js/datepicker.min.js"></script>
+	<script src="libs/fancybox/jquery.fancybox.pack.js"></script>
+	<script src="js/common.js"></script>
+</body>
+</html>
