@@ -1,0 +1,114 @@
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+.icon-icon-checked {
+  background-image: url(sprite-png.png);
+  background-position: 0px 0px;
+  width: 32px;
+  height: 32px;
+}
+.icon-icon1 {
+  background-image: url(sprite-png.png);
+  background-position: 0px -514px;
+  width: 81px;
+  height: 62px;
+}
+.icon-icon10 {
+  background-image: url(sprite-png.png);
+  background-position: 0px -717px;
+  width: 83px;
+  height: 65px;
+}
+.icon-icon11 {
+  background-image: url(sprite-png.png);
+  background-position: 0px -787px;
+  width: 59px;
+  height: 67px;
+}
+.icon-icon12 {
+  background-image: url(sprite-png.png);
+  background-position: 0px -859px;
+  width: 61px;
+  height: 68px;
+}
+.icon-icon13 {
+  background-image: url(sprite-png.png);
+  background-position: 0px -648px;
+  width: 64px;
+  height: 64px;
+}
+.icon-icon14 {
+  background-image: url(sprite-png.png);
+  background-position: 0px -932px;
+  width: 133px;
+  height: 99px;
+}
+.icon-icon2 {
+  background-image: url(sprite-png.png);
+  background-position: 0px -448px;
+  width: 69px;
+  height: 61px;
+}
+.icon-icon3 {
+  background-image: url(sprite-png.png);
+  background-position: 0px -140px;
+  width: 59px;
+  height: 54px;
+}
+.icon-icon4 {
+  background-image: url(sprite-png.png);
+  background-position: 0px -383px;
+  width: 50px;
+  height: 60px;
+}
+.icon-icon5 {
+  background-image: url(sprite-png.png);
+  background-position: 0px -199px;
+  width: 59px;
+  height: 54px;
+}
+.icon-icon6 {
+  background-image: url(sprite-png.png);
+  background-position: 0px -258px;
+  width: 55px;
+  height: 57px;
+}
+.icon-icon8 {
+  background-image: url(sprite-png.png);
+  background-position: 0px -581px;
+  width: 71px;
+  height: 62px;
+}
+.icon-icon9 {
+  background-image: url(sprite-png.png);
+  background-position: 0px -320px;
+  width: 59px;
+  height: 58px;
+}
+.icon-logo-r {
+  background-image: url(sprite-png.png);
+  background-position: 0px -37px;
+  width: 64px;
+  height: 42px;
+}
+.icon-logo {
+  background-image: url(sprite-png.png);
+  background-position: 0px -84px;
+  width: 82px;
+  height: 51px;
+}
